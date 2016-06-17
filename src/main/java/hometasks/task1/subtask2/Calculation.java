@@ -97,37 +97,37 @@ public class Calculation {
     }
 
     //расчет длины окружности
-    public static double lengthCircle(int r) {
+   public static double lengthCircle(int r) {
         return (double) (2 * Math.PI * r);
     }
 
     //расчет площади окружности
-    public static double areaCircle(int r) {
+   public static double areaCircle(int r) {
         return (double) (Math.PI * r * r);
     }
 
     //расчет площади кольца
-    public static double areaRing(int r, int ro) {
+    static double areaRing(int r, int ro) {
         return (double) (Math.PI * ((ro * ro) - (r * r)));
     }
     //расчет периметра треугольника
 
-    public static double perimeterTriangle(int a, int b, int c) {
+    static double perimeterTriangle(int a, int b, int c) {
         return (double) (0.5 * (a + b + c));
     }
 
     //расчет площади треугольника
-    public static double areaTriangle(int b, int h) {
+   public static double areaTriangle(int b, int h) {
         return (double) ((b * h) / 2);
     }
 
     //расчет периметра прямоугольника
-    public static double perimeterRectangular(int a, int b) {
+    static double perimeterRectangular(int a, int b) {
         return (double) (2 * (a + b));
     }
 
     //расчет площади прямоугольника
-    public static double areaRectangular(int a, int b) {
+    static double areaRectangular(int a, int b) {
         return (double) (a * b);
     }
 

@@ -110,7 +110,6 @@ public class CalcVolume {
                     case 9: {
                         System.out.println("Введите сторону треугольника а: ");
                         int a = Integer.parseInt(sc.next());
-                        int с = Integer.parseInt(sc.next());
                         System.out.println("Площадь тетраэдра = " + " " + areaTetraedr(a));
                     }
                     break;
@@ -125,48 +124,48 @@ public class CalcVolume {
     }
 
     //расчет объема цилиндра
-    public static double volumeCilinder(int r, int h) {
+    static double volumeCilinder(int r, int h) {
         return (double) (areaCircle(r) * h);
     }
 
     //расчет объема полого цилиндра
-    public static double volumePolCilinder(int r1, int r2, int h) {
+    static double volumePolCilinder(int r1, int r2, int h) {
         double res = r2 > r1 ? Math.PI * h * ((r2 * r2) - (r1 * r1)) : 0;
         return (double) (res);
     }
 
     //площадь боковой поверхности цилиндра не полого
-    public static double areaCilinder(int r, int h) {
+    static double areaCilinder(int r, int h) {
         return (double) (lengthCircle(r) * h);
     }
 
     //Объем шара
-    public static double volumeBall(int d) {
+    static double volumeBall(int d) {
         return (double) ((Math.PI * d * d * d) / 6);
     }
     //площадь поверхности шара
 
-    public static double areaBall(int d) {
+    static double areaBall(int d) {
         return (double) (Math.PI * d * d);
     }
 
     //объем параллелепипеда
-    public static double volumeParalelipipid(int a, int b, int c) {
+    static double volumeParalelipipid(int a, int b, int c) {
         return (double) (a * b * c);
     }
 
     //площадь поверхности параллелепипеда
-    public static double areaParalelipipid(int a, int b, int c) {
+    static double areaParalelipipid(int a, int b, int c) {
         return (double) (2 * (a * b + b * c + a * c));
     }
     //объем тетраэдра
 
-    public static double volumeTetraedr(int b, int h) {
+    static double volumeTetraedr(int b, int h) {
         return (double) (0.3 * (areaTriangle(b, h)) * h);
     }
     //площадь поверхности тетраэдра
 
-    public static double areaTetraedr(int a) {
+    static double areaTetraedr(int a) {
         return (double) (a * a * Math.sqrt(3));
     }
 
