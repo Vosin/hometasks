@@ -12,7 +12,7 @@
  *   заданного   пункта   назначения   
  *   и   имеющих   общие   места . 
  */
-package hometasks.task4.subtask10;
+package hometasks.task4.subtask_10;
 
 import java.util.Scanner;
 
