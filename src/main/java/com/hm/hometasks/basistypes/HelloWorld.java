@@ -2,7 +2,7 @@
  * Создать программу, которая выводит в консоль текст “Здравствуй 
  *  мир”
  */
-package hometasks.task1.subtask1.stask_1;
+package com.hm.hometasks.basistypes;
 
 /**
  *
@@ -11,7 +11,7 @@ package hometasks.task1.subtask1.stask_1;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        System.out.println("Здравствуй мир!");
+        System.out.println("Hello World!");
     }
 
 }

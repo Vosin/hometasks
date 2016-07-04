@@ -6,7 +6,8 @@
  * по вертикали 
  * по горизонтали и вертикали одновременно   
  */
-package hometasks.task2.subtasks6;
+package com.hm.hometasks.basistypes;
+
 import java.util.Arrays;
 
 /**
@@ -14,7 +15,18 @@ import java.util.Arrays;
  * @author Osin Vladimir
  */
 public class UnevenArray {
+
     public static void main(String[] args) {
+        int[][] array = createDim();
+        System.out.println("Печать по горизонтали:" + " ");
+        horizontally(array);
+        System.out.println("Печать по вертикали:" + " ");
+        vertically(array);
+        System.out.println("Печать одновременно по горизонтали и по  вертикали:" + " ");
+        horizontallyVertically(array);
+    }
+
+    static int[][] createDim() {
         int[][] array = new int[8][];
         array[0] = new int[1];
         array[1] = new int[2];
@@ -30,16 +42,13 @@ public class UnevenArray {
             }
             System.out.println();
         }
-        System.out.println("Печать по горизонтали:" + " ");
-        horizontally(array);
-        System.out.println("Печать по вертикали:" + " ");
-        vertically(array);
-        System.out.println("Печать одновременно по горизонтали и по  вертикали:" + " ");
-        horizontallyVertically(array);
+        return array;
     }
+
     static void horizontally(int[][] arr) {
         System.out.println(Arrays.deepToString(arr));
     }
+
     static void vertically(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -48,10 +57,10 @@ public class UnevenArray {
             System.out.println();
         }
     }
+
     static void horizontallyVertically(int[][] arr) {
-        horizontally(arr);      
-        vertically(arr); 
-     }
-    
-    
+        horizontally(arr);
+        vertically(arr);
+    }
+
 }

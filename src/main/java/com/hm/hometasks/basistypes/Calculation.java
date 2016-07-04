@@ -7,7 +7,7 @@
  * периметр треугольника, площадь треугольника 
  * периметр, площадь прямоугольника 
  */
-package hometasks.task1.subtask2;
+package com.hm.hometasks.basistypes;
 
 import java.util.Scanner;
 
@@ -18,8 +18,12 @@ import java.util.Scanner;
 public class Calculation {
 
     public static void main(String[] args) {
+        consolInputOutput();
+    }
 
-        Scanner sc  = new Scanner(System.in);
+    //Ввод и вывод с консоли 
+    static void consolInputOutput() {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Для расчета длины окружности введите : 1 ");
@@ -46,7 +50,7 @@ public class Calculation {
                     break;
                     case 3: {
                         System.out.println("Введите радиус вписанной окружности: ");
-                        int r  = Integer.parseInt(sc.next());
+                        int r = Integer.parseInt(sc.next());
                         System.out.println("Введите радиус описанной окружности: ");
                         int ro = Integer.parseInt(sc.next());
                         System.out.println("Площадь кольца = " + " " + areaRing(r, ro));
@@ -97,12 +101,12 @@ public class Calculation {
     }
 
     //расчет длины окружности
-   public static double lengthCircle(int r) {
+    static double lengthCircle(int r) {
         return (double) (2 * Math.PI * r);
     }
 
     //расчет площади окружности
-   public static double areaCircle(int r) {
+    static double areaCircle(int r) {
         return (double) (Math.PI * r * r);
     }
 
@@ -117,7 +121,7 @@ public class Calculation {
     }
 
     //расчет площади треугольника
-   public static double areaTriangle(int b, int h) {
+    static double areaTriangle(int b, int h) {
         return (double) ((b * h) / 2);
     }
 

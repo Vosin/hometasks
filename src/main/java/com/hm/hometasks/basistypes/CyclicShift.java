@@ -7,7 +7,7 @@
  *  на n позиций вверх 
  *  на n позиций вниз 
  */
-package hometasks.task2.subtasks7;
+package com.hm.hometasks.basistypes;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,13 +17,14 @@ import java.util.Scanner;
  * @author Osin Vladimir
  */
 public class CyclicShift {
+
     public static void main(String[] args) {
         int[][] sourceDim = createDim();
         System.out.println("Исходный массив" + " ");
         for (int[] x : sourceDim) {
             System.out.println(Arrays.toString(x));
         }
-        Scanner sc  = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Укажите число на сколько нужно сдвинуть массив(целое, положительное) ");
@@ -66,8 +67,8 @@ public class CyclicShift {
     //создаем прямоугольную матрицу
     static int[][] createDim() {
         int k = 1;
-        int[][] dim = new int[5][7];
-        for (int i  = 0; i < dim.length; i++) {
+        int[][] dim = new int[7][10];
+        for (int i = 0; i < dim.length; i++) {
             for (int j = 0; j < dim[i].length; j++) {
                 dim[i][j] = k;
                 ++k;
@@ -81,7 +82,7 @@ public class CyclicShift {
      *shift - строка направления сдвига
      */
     static int[][] shift(int[][] sourceArr, int count, String shift) {
-        int row    = sourceArr.length;
+        int row = sourceArr.length;
         int column = sourceArr[0].length;
         //создаем новый массив
         int[][] destinationArr = new int[row][column];

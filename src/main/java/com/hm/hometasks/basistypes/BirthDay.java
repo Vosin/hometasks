@@ -4,7 +4,7 @@
  *  операцию над числом, введенным пользователем, проверяя данные из 
  *  необходимых бит на валидность, если число является датой ­ выводит ее в Консоль
  */
-package hometasks.task3.subtask2;
+package com.hm.hometasks.basistypes;
 
 import java.util.Scanner;
 
@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author Osin Vladimir
  */
 public class BirthDay {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
@@ -45,16 +46,16 @@ public class BirthDay {
                                     mask & y);
                         } else {
                             System.out.println("Вы ввели неправильный год дня рождения!!");
-                             end = true;
+                            end = true;
                         }
                     } else {
                         System.out.println("Вы ввели неправильный месяц дня рождения!!");
-                         end = true;
+                        end = true;
                     }
 
                 } else {
                     System.out.println("Вы ввели неправильный день дня рождения!!");
-                     end = true;
+                    end = true;
                 }
             } catch (Exception e) {
                 end = true;

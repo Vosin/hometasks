@@ -7,8 +7,7 @@
  * сумму элементов, кратных 7 
  * произведение элементов, кратных 3
  */
-package hometasks.task2.subtasks4;
-
+package com.hm.hometasks.basistypes;
 
 import java.util.Random;
 
@@ -19,11 +18,7 @@ import java.util.Random;
 public class OneArray {
 
     public static void main(String[] args) {
-        Random random = new Random();
-        int[] array = new int[15];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(20);
-        }
+        int[] array = createArray();
         System.out.println("Печать элементов в прямом порядке:");
         printDirectOrder(array);
         System.out.println("Печать элементов в обратном порядке:");
@@ -34,7 +29,16 @@ public class OneArray {
         printUnevenElement(array);
         printMultipleSeven(array);
         printOperationThree(array);
-        
+
+    }
+
+    static int[] createArray() {
+        Random random = new Random();
+        int[] array = new int[15];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(20);
+        }
+        return array;
     }
 
     static void printDirectOrder(int[] arr) {
@@ -64,23 +68,25 @@ public class OneArray {
             }
         }
     }
+
     static void printMultipleSeven(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 7 == 0) {
                 sum += arr[i];
-             }
+            }
         }
-         System.out.println("Сумма элементов кратных 7: " + sum);
-}
-     static void printOperationThree(int[] arr) {
+        System.out.println("Сумма элементов кратных 7: " + sum);
+    }
+
+    static void printOperationThree(int[] arr) {
         int operation = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 3 == 0) {
                 operation *= arr[i];
-             }
+            }
         }
-         System.out.println("Произведение элементов кратных 3: " + operation);
+        System.out.println("Произведение элементов кратных 3: " + operation);
 
-}  
+    }
 }

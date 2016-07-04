@@ -9,24 +9,26 @@
  * объем, площадь поверхности прямоугольного параллелепипеда 
  * объем, площадь поверхности тетраэдра   .
  */
-package hometasks.task1.subtask3;
+package com.hm.hometasks.basistypes;
 
-import static hometasks.task1.subtask2.Calculation.areaCircle;
-import static hometasks.task1.subtask2.Calculation.areaTriangle;
-import static hometasks.task1.subtask2.Calculation.lengthCircle;
+import static com.hm.hometasks.basistypes.Calculation.areaCircle;
+import static com.hm.hometasks.basistypes.Calculation.areaTriangle;
+import static com.hm.hometasks.basistypes.Calculation.lengthCircle;
 import java.util.Scanner;
 
 /**
  *
  * @author Osin Vladimir
  */
-
-
-
 public class CalcVolume {
 
     public static void main(String[] args) {
-        Scanner sc  = new Scanner(System.in);
+        consolIO();
+
+    }
+
+    static void consolIO() {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Для расчета объема  цилиндра введите : 1 ");
@@ -121,6 +123,7 @@ public class CalcVolume {
                 end = true;
             }
         }
+
     }
 
     //расчет объема цилиндра

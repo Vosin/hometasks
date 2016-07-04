@@ -3,7 +3,7 @@
  * произвольным текстом  размещенную на нескольких строках кода. 
  * Вывести текст в консоль
  */
-package hometasks.task1.subtask1.stask_2;
+package com.hm.hometasks.basistypes;
 
 /**
  *
