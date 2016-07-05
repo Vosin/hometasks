@@ -37,7 +37,7 @@ public class Algebra {
     }
 
     //Значения кратные двум
-    static int valuesMultiplesTwo(int sumT) {
+public static int valuesMultiplesTwo(int sumT) {
         for (int i = 0; i <= 100; i++) {
             if (i % 2 == 0) {
                 System.out.println("Значения кратные 2: " + " " + i);
@@ -49,7 +49,7 @@ public class Algebra {
     }
     //Значения кратные трем
 
-    static int valuesMultiplesThree(int sumTh) {
+public static int valuesMultiplesThree(int sumTh) {
         for (int i = 0; i <= 100; i++) {
             if (i % 3 == 0) {
                 System.out.println("Значения кратные 3: " + " " + i);
@@ -61,7 +61,7 @@ public class Algebra {
     }
 
     //Значения кратные пяти
-    static int valuesMultiplesFive(int sumF) {
+public static int valuesMultiplesFive(int sumF) {
         for (int i = 0; i <= 100; i++) {
             if (i % 5 == 0) {
                 System.out.println("Значения кратные 5: " + " " + i);
@@ -73,7 +73,7 @@ public class Algebra {
     }
 
     //Значения кратные семи
-    static int valuesMultiplesSeven(int sumS) {
+public static int valuesMultiplesSeven(int sumS) {
 
         for (int i = 0; i <= 100; i++) {
             if (i % 7 == 0) {
@@ -86,12 +86,12 @@ public class Algebra {
     }
 
     //вычисляем разность семерки сумм последовательностей семи и двойки
-    static int differentSevenTwo(int sumS, int sumT) {
+public static int differentSevenTwo(int sumS, int sumT) {
         return sumS - sumT;
     }
 
     // вычисляет соотношение сумм пяти к трем
-    static double ratioFiveThree(double sumF, double sumTh) {
+public static double ratioFiveThree(double sumF, double sumTh) {
         return (sumF / sumTh);
     }
 }

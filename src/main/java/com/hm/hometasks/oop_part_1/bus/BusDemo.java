@@ -10,7 +10,7 @@
  *  заданного   расстояния . 
  
  */
-package hometasks.task4.subtask_11;
+package com.hm.hometasks.oop_part_1.bus;
 
 import java.util.Scanner;
 
@@ -21,7 +21,11 @@ import java.util.Scanner;
 public class BusDemo {
 
     public static void main(String[] args) {
-        //заполняем объект автобус данными
+     Bus[]buses = createListBuses();
+     consolIO(buses);
+    }
+    public static Bus[]createListBuses(){
+      //заполняем объект автобус данными
         Bus bs1 = new Bus("Петров В.И", 3, 14, "Лаз", 1998, 1000);
         Bus bs2 = new Bus("Сидоров А.В", 15, 18, "Богдан", 2005, 1100);
         Bus bs3 = new Bus("Джугашвили А.Юв", 23, 22, "Лаз", 2000, 5000);
@@ -34,7 +38,10 @@ public class BusDemo {
         bs[2] = bs3;
         bs[3] = bs4;
         bs[4] = bs5;
-        Scanner sc = new Scanner(System.in);
+        return bs;
+    }
+    public static void consolIO(Bus[]buses){
+         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   автобусов   для   заданного   номера маршрута  введите  : 1 ");
@@ -46,19 +53,19 @@ public class BusDemo {
                     case 1: {
                         System.out.println("Введите номер маршрута:");
                         int r = Integer.parseInt(sc.next());
-                        printNumberMarshruta(bs, r);
+                        printNumberMarshruta(buses, r);
                     }
                     break;
                     case 2: {
                         System.out.println("Введите срок эксплуатации");
                         int r1 = Integer.parseInt(sc.next());
-                        printSrokEkspluatatsii(bs, r1);
+                        printSrokEkspluatatsii(buses, r1);
                     }
                     break;
                     case 3: {
                         System.out.println("Введите  пробег");
                         int r1 = Integer.parseInt(sc.next());
-                        printProbeg(bs, r1);
+                        printProbeg(buses, r1);
                     }
                     break;
                     default: {
@@ -70,8 +77,8 @@ public class BusDemo {
             }
         }
     }
-
-    static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
+//Cписок   автобусов   для   заданного   номера маршрута
+public static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getNumberMarshruta() == numberMarschruta) {
@@ -83,8 +90,8 @@ public class BusDemo {
             System.out.println("Нет такого маршрута");
         }
     }
-
-    static void printSrokEkspluatatsii(Bus[] arr, int srokEkspluatasii) {
+//Список   автобусов ,  которые  эксплуатируются   больше   заданного   срока
+ public static void printSrokEkspluatatsii(Bus[] arr, int srokEkspluatasii) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].SrokEkspluatasii() > srokEkspluatasii) {
@@ -96,8 +103,8 @@ public class BusDemo {
             System.out.println("Нет такого  срока эксплуатации");
         }
     }
-
-    static void printProbeg(Bus[] arr, int probeg) {
+//Список   автобусов ,  пробег   у   которых   больше  заданного   расстояния
+public static void printProbeg(Bus[] arr, int probeg) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getProbeg() > probeg) {
@@ -112,99 +119,3 @@ public class BusDemo {
 
 }
 
-class Bus {
-//определяем поля класса
-
-    private String surname;
-    private int numberBus;
-    private int numberMarshruta;
-    private String marka;
-    private int godStartEkspluatatsii;
-    private int probeg;// в километрах
-
-//определяем конструкторы
-    Bus() {
-    }
-
-    Bus(String surname, int numberBus, int numberMarshruta, String marka, int godStartEkspluatatsii, int probeg) {
-        this.surname = surname;
-        this.numberBus = numberBus;
-        this.numberMarshruta = numberMarshruta;
-        this.marka = marka;
-        this.godStartEkspluatatsii = godStartEkspluatatsii;
-        this.probeg = probeg;
-    }
-
-    Bus(String surname, int numberBus, int numberMarshruta) {
-        this.surname = surname;
-        this.numberBus = numberBus;
-        this.numberMarshruta = numberMarshruta;
-    }
-
-    Bus(int numberBus, int numberMarshruta, String marka, int probeg) {
-        this.numberBus = numberBus;
-        this.numberMarshruta = numberMarshruta;
-        this.marka = marka;
-        this.probeg = probeg;
-    }
-
-//определяем геттеры и сеттеры
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setNumberBus(int numberBus) {
-        this.numberBus = numberBus;
-    }
-
-    public int getNumberBus() {
-        return numberBus;
-    }
-
-    public void setNumberMarshruta(int numberMarshruta) {
-        this.numberMarshruta = numberMarshruta;
-    }
-
-    public int getNumberMarshruta() {
-        return numberMarshruta;
-    }
-
-    public void setMarka(String marka) {
-        this.marka = marka;
-    }
-
-    public String getMarka() {
-        return marka;
-    }
-
-    public void setGodStartEkspluatatsii(int godStartEkspluatatsii) {
-        this.godStartEkspluatatsii = godStartEkspluatatsii;
-    }
-
-    public int getGodStartEkspluatatsii() {
-        return godStartEkspluatatsii;
-    }
-
-    public void setProbeg(int probeg) {
-        this.probeg = probeg;
-    }
-
-    public int getProbeg() {
-        return probeg;
-    }
-
-    @Override
-    public String toString() {
-        return "Автобус" + " " + "Водитель=" + " " + surname + " " + "номер=" + numberBus + " " + "номер маршрута=" + " " + numberMarshruta + " " + "Марка =" + marka + " "
-                + "Год старта эксплуатации=" + " " + godStartEkspluatatsii + " " + "Пробег:" + " " + probeg;
-    }
-
-    public int SrokEkspluatasii() {
-        int currentYear = 2016;
-        return currentYear - godStartEkspluatatsii;
-    }
-}

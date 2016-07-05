@@ -65,7 +65,7 @@ public class CyclicShift {
     }
 
     //создаем прямоугольную матрицу
-    static int[][] createDim() {
+public static int[][] createDim() {
         int k = 1;
         int[][] dim = new int[7][10];
         for (int i = 0; i < dim.length; i++) {
@@ -81,7 +81,7 @@ public class CyclicShift {
      *count - переменная количества сдвигов
      *shift - строка направления сдвига
      */
-    static int[][] shift(int[][] sourceArr, int count, String shift) {
+public static int[][] shift(int[][] sourceArr, int count, String shift) {
         int row = sourceArr.length;
         int column = sourceArr[0].length;
         //создаем новый массив

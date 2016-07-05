@@ -11,7 +11,7 @@
  * c )   список   товаров ,  срок   хранения   которых  
  * больше   заданного . 
  */
-package hometasks.task4.subtask9;
+package com.hm.hometasks.oop_part_1.product;
 
 import java.util.Scanner;
 
@@ -22,7 +22,11 @@ import java.util.Scanner;
 public class ProductDemo {
 
     public static void main(String[] args) {
-        //заполняем объект продукт данными
+      Product[]products = createLisProducts();
+      conscolIO(products);
+    }
+    public static Product[]createLisProducts(){
+         //заполняем объект продукт данными
         Product pt1 = new Product(1, "Молоко", 3, "БалМолоко", 10.55, 30, 420);
         Product pt2 = new Product(2, "Кефир", 5, "КрасноградМолоко", 15.25, 15, 156);
         Product pt3 = new Product(3, "Сметана", 3, "БалМолоко", 20.44, 25, 148);
@@ -35,6 +39,9 @@ public class ProductDemo {
         pt[2] = pt3;
         pt[3] = pt4;
         pt[4] = pt5;
+        return pt;
+    }
+    public static void conscolIO(Product[]products){
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -47,7 +54,7 @@ public class ProductDemo {
                     case 1: {
                         System.out.println("Введите наименование товара: Молоко -1;Кефир-2;Сметана-3;Ряженка-4");
                         int r = Integer.parseInt(sc.next());
-                        printTovar(pt, r);
+                        printTovar(products, r);
                     }
                     break;
                     case 2: {
@@ -55,13 +62,13 @@ public class ProductDemo {
                         int r1 = Integer.parseInt(sc.next());
                         System.out.println("Введите цену");
                         double r2 = Double.parseDouble(sc.next());
-                        printPrice(pt, r1, r2);
+                        printPrice(products, r1, r2);
                     }
                     break;
                     case 3: {
                         System.out.println("Введите срок хранения в днях");
                         int r3 = Integer.parseInt(sc.next());
-                        printTimeStorage(pt, r3);
+                        printTimeStorage(products, r3);
                     }
                     break;
                     default: {
@@ -71,10 +78,10 @@ public class ProductDemo {
             } catch (Exception e) {
                 end = true;
             }
-        }
+        } 
     }
-
-    static void printTovar(Product[] arr, int tovar) {
+//Cписок   товаров   для   заданного наименования
+ public static void printTovar(Product[] arr, int tovar) {
         String result;
         switch (tovar) {
             case 1: {
@@ -108,8 +115,8 @@ public class ProductDemo {
             System.out.println("Нет такой продукции");
         }
     }
-
-    static void printPrice(Product[] arr, int tovar, double price) {
+//Cписок   товаров   для   заданного наименования ,  цена   которых   не   превос ­ ходит заданную
+public static void printPrice(Product[] arr, int tovar, double price) {
         String result;
         switch (tovar) {
             case 1: {
@@ -143,8 +150,8 @@ public class ProductDemo {
             System.out.println("Нет такой продукции");
         }
     }
-
-    static void printTimeStorage(Product[] arr, int timeStorage) {
+//Cписок   товаров ,  срок   хранения   которых больше   заданного
+ public static void printTimeStorage(Product[] arr, int timeStorage) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if ((arr[i].getTimeStorage() > timeStorage)) {
@@ -159,108 +166,3 @@ public class ProductDemo {
 
 }
 
-class Product {
-//определяем поля класса
-
-    private int    id;
-    private String name;
-    private int    upc;
-    private String company;
-    private double price;
-    private int    timeStorage;//в днях
-    private int    count;
-
-//определяем конструкторы
-    Product() {
-    }
-
-    Product(int id, String name, int upc, String company, double price, int timeStorage, int count) {
-        this.id          = id;
-        this.name        = name;
-        this.upc         = upc;
-        this.company     = company;
-        this.price       = price;
-        this.timeStorage = timeStorage;
-        this.count       = count;
-    }
-
-    Product(String name, int upc, String company) {
-        this.name = name;
-        this.upc = upc;
-        this.company = company;
-
-    }
-
-    Product(String name, int upc, String company, double price) {
-        this.name = name;
-        this.upc = upc;
-        this.company = company;
-        this.price = price;
-
-    }
-
-//определяем геттеры и сеттеры
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setUpc(int upc) {
-        this.upc = upc;
-    }
-
-    public int getUpc() {
-        return upc;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setTimeStorage(int timeStorage) {
-        this.timeStorage = timeStorage;
-    }
-
-    public int getTimeStorage() {
-        return timeStorage;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    @Override
-    public String toString() {
-        return "Продукт" + " " + "id =" + " " + id + " " + "Наименование=" + name + " " + "UPC=" + " " + upc + " " + "Производитель =" + company + " "
-                + "Цена=" + " " + price + " " + "СрокХранения:" + " " + timeStorage + " Количество=" + " "
-                + count;
-    }
-
-}

@@ -26,7 +26,7 @@ public class UnevenArray {
         horizontallyVertically(array);
     }
 
-    static int[][] createDim() {
+public static int[][] createDim() {
         int[][] array = new int[8][];
         array[0] = new int[1];
         array[1] = new int[2];
@@ -45,11 +45,11 @@ public class UnevenArray {
         return array;
     }
 
-    static void horizontally(int[][] arr) {
+public static void horizontally(int[][] arr) {
         System.out.println(Arrays.deepToString(arr));
     }
 
-    static void vertically(int[][] arr) {
+public static void vertically(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.println(arr[i][j] + " ");
@@ -58,7 +58,7 @@ public class UnevenArray {
         }
     }
 
-    static void horizontallyVertically(int[][] arr) {
+public static void horizontallyVertically(int[][] arr) {
         horizontally(arr);
         vertically(arr);
     }

@@ -18,7 +18,7 @@ public class RandomNumber {
         printRandomNumber(random.nextInt(99));
     }
 
-    static void printRandomNumber(int i) {
+public static void printRandomNumber(int i) {
         int number = 0;
         switch (i) {
             case 0:

@@ -32,7 +32,7 @@ public class OneArray {
 
     }
 
-    static int[] createArray() {
+public static int[] createArray() {
         Random random = new Random();
         int[] array = new int[15];
         for (int i = 0; i < array.length; i++) {
@@ -41,19 +41,19 @@ public class OneArray {
         return array;
     }
 
-    static void printDirectOrder(int[] arr) {
+public static void printDirectOrder(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.println("Элемент массива: " + arr[i]);
         }
     }
 
-    static void printReverseOrder(int[] arr) {
+public static void printReverseOrder(int[] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
             System.out.println("Элемент массива: " + arr[i]);
         }
     }
 
-    static void printEvenElement(int[] arr) {
+public static void printEvenElement(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
                 System.out.println("Четный элемент массива: " + arr[i]);
@@ -61,7 +61,7 @@ public class OneArray {
         }
     }
 
-    static void printUnevenElement(int[] arr) {
+public static void printUnevenElement(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 != 0) {
                 System.out.println("Нечетный элемент массива: " + arr[i]);
@@ -69,7 +69,7 @@ public class OneArray {
         }
     }
 
-    static void printMultipleSeven(int[] arr) {
+public static void printMultipleSeven(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 7 == 0) {
@@ -79,7 +79,7 @@ public class OneArray {
         System.out.println("Сумма элементов кратных 7: " + sum);
     }
 
-    static void printOperationThree(int[] arr) {
+public static void printOperationThree(int[] arr) {
         int operation = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 3 == 0) {

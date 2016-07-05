@@ -23,7 +23,7 @@ public class GeneratorSpeak {
         }
     }
 
-    static String strDim1() {
+public static String strDim1() {
         Random random = new Random();
         String[] arr = new String[10];
         arr[0] = "Дорогие друзья!";
@@ -40,7 +40,7 @@ public class GeneratorSpeak {
         return arr[result];
     }
 
-    static String strDim2() {
+public static String strDim2() {
         Random random = new Random();
         String[] arr = new String[10];
         arr[0] = "реализация намеченных плановых заданий ";
@@ -57,7 +57,7 @@ public class GeneratorSpeak {
         return arr[result];
     }
 
-    static String strDim3() {
+public static String strDim3() {
         Random random = new Random();
         String[] arr = new String[10];
         arr[0] = "играет важную роль в формировании";
@@ -74,7 +74,7 @@ public class GeneratorSpeak {
         return arr[result];
     }
 
-    static String strDim4() {
+public static String strDim4() {
         Random random = new Random();
         String[] arr = new String[10];
         arr[0] = "существующих финансовых и административных условий";

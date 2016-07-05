@@ -9,7 +9,7 @@
  *  c)   список   книг ,  выпущенных   после   заданного  
  *  года . 
  */
-package hometasks.task4.subtask5;
+package com.hm.hometasks.oop_part_1.book;
 
 import java.util.Scanner;
 
@@ -20,7 +20,11 @@ import java.util.Scanner;
 public class BookDemo {
 
     public static void main(String[] args) {
-        //заполняем объект книга данными
+        Book[]books = createListBooks();
+        consolIO(books);
+    }
+    public static Book[]createListBooks(){
+      //заполняем объект книга данными
         Book b1 = new Book(1, "Кир Булычев", "Алиса", "Москва", 1981, 100, 150.25, "мягкий");
         Book b2 = new Book(2, "Иван Семенов", "Алиса", "Питер", 1978, 300, 300.45, "твердый");
         Book b3 = new Book(3, "Петр Сизов", "Алиса", "Питер", 1936, 200, 500.2, "твердый");
@@ -33,7 +37,10 @@ public class BookDemo {
         bk[2] = b3;
         bk[3] = b4;
         bk[4] = b5;
-        Scanner sc = new Scanner(System.in);
+        return bk;
+    }
+    public static void consolIO(Book[]books){
+         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   книг   заданного   автора введите  : 1 ");
@@ -45,19 +52,19 @@ public class BookDemo {
                     case 1: {
                         System.out.println("Введите автора: Кир Булычев -1;Иван Семенов-2;Петр Сизов-3;Аркадий Гайдар-4");
                         int r = Integer.parseInt(sc.next());
-                        printAutor(bk, r);
+                        printAutor(books, r);
                     }
                     break;
                     case 2: {
                         System.out.println("Введите издательство: Москва -1;Питер-2;Харьков-3;");
                         int r1 = Integer.parseInt(sc.next());
-                        printIzdatelstvo(bk, r1);
+                        printIzdatelstvo(books, r1);
                     }
                     break;
                     case 3: {
                         System.out.println("Введите год ");
                         int r2 = Integer.parseInt(sc.next());
-                        printYear(bk, r2);
+                        printYear(books, r2);
                     }
                     break;
                     default: {
@@ -69,8 +76,8 @@ public class BookDemo {
             }
         }
     }
-
-    static void printAutor(Book[] arr, int a) {
+//список книг заданного автора
+public static void printAutor(Book[] arr, int a) {
         String result;
         switch (a) {
             case 1: {
@@ -104,8 +111,8 @@ public class BookDemo {
             System.out.println("Нет такого автора");
         }
     }
-
-    static void printIzdatelstvo(Book[] arr, int iz) {
+//Список книг по издательству
+public static void printIzdatelstvo(Book[] arr, int iz) {
         String result;
         switch (iz) {
             case 1: {
@@ -135,8 +142,8 @@ public class BookDemo {
             System.out.println("Нет такого издательства");
         }
     }
-
-    static void printYear(Book[] arr, int year) {
+//Список книг по году
+public static void printYear(Book[] arr, int year) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getGodIzdania() > year) {
@@ -151,119 +158,3 @@ public class BookDemo {
 
 }
 
-class Book {
-//определяем поля класса
-
-    private int id;
-    private String autor;
-    private String name;
-    private String izdatelstvo;
-    private int godIzdania;
-    private int countPage;
-    private double price;
-    private String type;
-
-//определяем конструкторы
-    Book() {
-    }
-
-    Book(int id, String autor, String name, String izdatelstvo, int godIzdania, int countPage, double price, String type) {
-        this.id = id;
-        this.autor = autor;
-        this.name = name;
-        this.izdatelstvo = izdatelstvo;
-        this.godIzdania = godIzdania;
-        this.countPage = countPage;
-        this.price = price;
-        this.type = type;
-
-    }
-
-    Book(String autor, String name, String izdatelstvo, int godIzdania) {
-        this.autor = autor;
-        this.name = name;
-        this.izdatelstvo = izdatelstvo;
-        this.godIzdania = godIzdania;
-    }
-
-    Book(String autor, String name, String izdatelstvo, double price, String type) {
-        this.autor = autor;
-        this.name = name;
-        this.izdatelstvo = izdatelstvo;
-        this.price = price;
-        this.type = type;
-
-    }
-
-//определяем геттеры и сеттеры
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setIzdatelstvo(String izdatelstvo) {
-        this.izdatelstvo = izdatelstvo;
-    }
-
-    public String getIzdatelstvo() {
-        return izdatelstvo;
-    }
-
-    public void setGodIzdania(int godIzdania) {
-        this.godIzdania = godIzdania;
-    }
-
-    public int getGodIzdania() {
-        return godIzdania;
-    }
-
-    public void setCountPage(int countPage) {
-        this.countPage = countPage;
-    }
-
-    public int getCountPage() {
-        return countPage;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    @Override
-    public String toString() {
-        return "Книга" + " " + "id =" + " " + id + " " + "Автор=" + autor + " " + "Название=" + " " + name + " " + "Издательство =" + izdatelstvo + " "
-                + "Год издания=" + " " + godIzdania + " " + "Количество страниц:" + " " + countPage + " цена=" + " "
-                + price + ": " + "Тип переплета=" + " " + type;
-    }
-}

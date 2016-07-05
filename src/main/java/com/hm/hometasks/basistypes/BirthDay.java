@@ -64,7 +64,7 @@ public class BirthDay {
 
     }
 
-    static boolean inspectionDay(int day) {
+public static boolean inspectionDay(int day) {
         final int countDay = 31;
         if (day < 0) {
             return false;
@@ -75,7 +75,7 @@ public class BirthDay {
         }
     }
 
-    static boolean inspectionMonth(int month) {
+public static boolean inspectionMonth(int month) {
         final int countMonth = 12;
         if (month < 0) {
             return false;
@@ -86,7 +86,7 @@ public class BirthDay {
         }
     }
 
-    static boolean inspectionYear(int year) {
+public static boolean inspectionYear(int year) {
         final int countYear = 2018;
         if (year < 0) {
             return false;

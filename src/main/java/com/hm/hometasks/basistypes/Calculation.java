@@ -22,7 +22,7 @@ public class Calculation {
     }
 
     //Ввод и вывод с консоли 
-    static void consolInputOutput() {
+public static void consolInputOutput() {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -101,37 +101,37 @@ public class Calculation {
     }
 
     //расчет длины окружности
-    static double lengthCircle(int r) {
+public static double lengthCircle(int r) {
         return (double) (2 * Math.PI * r);
     }
 
     //расчет площади окружности
-    static double areaCircle(int r) {
+public static double areaCircle(int r) {
         return (double) (Math.PI * r * r);
     }
 
     //расчет площади кольца
-    static double areaRing(int r, int ro) {
+public static double areaRing(int r, int ro) {
         return (double) (Math.PI * ((ro * ro) - (r * r)));
     }
     //расчет периметра треугольника
 
-    static double perimeterTriangle(int a, int b, int c) {
+public static double perimeterTriangle(int a, int b, int c) {
         return (double) (0.5 * (a + b + c));
     }
 
     //расчет площади треугольника
-    static double areaTriangle(int b, int h) {
+public static double areaTriangle(int b, int h) {
         return (double) ((b * h) / 2);
     }
 
     //расчет периметра прямоугольника
-    static double perimeterRectangular(int a, int b) {
+public static double perimeterRectangular(int a, int b) {
         return (double) (2 * (a + b));
     }
 
     //расчет площади прямоугольника
-    static double areaRectangular(int a, int b) {
+public static double areaRectangular(int a, int b) {
         return (double) (a * b);
     }
 

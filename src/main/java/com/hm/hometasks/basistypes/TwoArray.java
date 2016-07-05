@@ -33,7 +33,7 @@ public class TwoArray {
         printOperationThree(array);
     }
 
-    static void printDirectOrder(int[][] arr) {
+public static void printDirectOrder(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.println("Элемент массива: " + arr[i][j]);
@@ -41,7 +41,7 @@ public class TwoArray {
         }
     }
 
-    static int[][] createDim() {
+public static int[][] createDim() {
         Random random = new Random();
         int[][] array = new int[10][15];
         for (int i = 0; i < array.length; i++) {
@@ -52,7 +52,7 @@ public class TwoArray {
         return array;
     }
 
-    static void printReverseOrder(int[][] arr) {
+public static void printReverseOrder(int[][] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
             {
                 for (int j = arr[i].length - 1; j > 0; j--) {
@@ -63,7 +63,7 @@ public class TwoArray {
 
     }
 
-    static void printEvenElement(int[][] arr) {
+public static void printEvenElement(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             {
                 for (int j = arr[i].length - 1; j > 0; j--) {
@@ -78,7 +78,7 @@ public class TwoArray {
         }
     }
 
-    static void printUnevenElement(int[][] arr) {
+public static void printUnevenElement(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             {
                 for (int j = arr[i].length - 1; j > 0; j--) {
@@ -93,7 +93,7 @@ public class TwoArray {
         }
     }
 
-    static void printMultipleSeven(int[][] arr) {
+public static void printMultipleSeven(int[][] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             {
@@ -109,7 +109,7 @@ public class TwoArray {
         System.out.println("Сумма элементов кратных 7  в четных строках: " + sum);
     }
 
-    static void printOperationThree(int[][] arr) {
+public static void printOperationThree(int[][] arr) {
         int operation = 0;
         for (int i = 0; i < arr.length; i++) {
             {

@@ -8,7 +8,7 @@
  *  c)   список   рейсов   для   заданного   дня   недели , 
  *  время   вылета   для   которых   больше   заданного . 
  */
-package hometasks.task4.subtask_12;
+package com.hm.hometasks.oop_part_1.airLine;
 
 import java.util.Scanner;
 
@@ -19,7 +19,11 @@ import java.util.Scanner;
 public class AirLineDemo {
 
     public static void main(String[] args) {
-        //заполняем объект лайнер данными
+        AirLine[]airLines = createListAirLines();
+        consolIO(airLines);
+    }
+public static AirLine[]createListAirLines(){
+  //заполняем объект лайнер данными
         AirLine ar1 = new AirLine("Москва", 3, "Пассажирский", 12.00, "Понедельник");
         AirLine ar2 = new AirLine("Питер", 15, "Грузовой", 15.45, "Вторник");
         AirLine ar3 = new AirLine("Вашингтон", 23, "Пассажирский", 16.00, "Пятница");
@@ -32,7 +36,10 @@ public class AirLineDemo {
         ar[2] = ar3;
         ar[3] = ar4;
         ar[4] = ar5;
-        Scanner sc = new Scanner(System.in);
+        return ar;
+}
+public static void consolIO(AirLine[]airLines){
+      Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   рейсов   для   заданного   пункта назначения   введите  : 1 ");
@@ -44,13 +51,13 @@ public class AirLineDemo {
                     case 1: {
                         System.out.println("Введите пункт назначения:Москва -1,Питер-2,Вашингтон-3,НьюЙорк-4");
                         int r = Integer.parseInt(sc.next());
-                        printDestination(ar, r);
+                        printDestination(airLines, r);
                     }
                     break;
                     case 2: {
                         System.out.println("Введите день недели понедельник-1; вторник-2; среда-3;четверг-4;пятница-5;суббота -6; воскресенье-7");
                         int r1 = Integer.parseInt(sc.next());
-                        printDays(ar, r1);
+                        printDays(airLines, r1);
                     }
                     break;
                     case 3: {
@@ -59,7 +66,7 @@ public class AirLineDemo {
                         int r1 = Integer.parseInt(sc.next());
                         System.out.println("Введите  время вылета");
                         double r2 = Double.parseDouble(sc.next());
-                        printTimeDeparture(ar, r1, r2);
+                        printTimeDeparture(airLines, r1, r2);
                     }
                     break;
                     default: {
@@ -70,9 +77,9 @@ public class AirLineDemo {
                 end = true;
             }
         }
-    }
-
-    static void printDestination(AirLine[] arr, int destination) {
+}
+//Cписок   рейсов   для   заданного   пункта назначения
+public static void printDestination(AirLine[] arr, int destination) {
         String result;
         switch (destination) {
             case 1: {
@@ -106,8 +113,8 @@ public class AirLineDemo {
             System.out.println("Нет такого пункта назначения");
         }
     }
-
-    static void printDays(AirLine[] arr, int day) {
+//Cписок   рейсов   для   заданного   дня   недели
+public static void printDays(AirLine[] arr, int day) {
         String result;
         switch (day) {
             case 1: {
@@ -150,11 +157,11 @@ public class AirLineDemo {
             }
         }
         if (flg == 0) {
-            System.out.println("Нет такого  дня недели");
+            System.out.println("Нет такого  рейса  в этот день");
         }
     }
-
-    static void printTimeDeparture(AirLine[] arr, int day, double timeDepature) {
+//Cписок   рейсов   для   заданного   дня   недели время   вылета   для   которых   больше   заданного
+public static void printTimeDeparture(AirLine[] arr, int day, double timeDepature) {
         String result;
         switch (day) {
             case 1: {
@@ -203,87 +210,3 @@ public class AirLineDemo {
 
 }
 
-class AirLine {
-//определяем поля класса
-
-    private String destination;
-    private int numberReys;
-    private String typeAir;
-    private double timeDeparture;
-    private String days;
-
-//определяем конструкторы
-    AirLine() {
-    }
-
-    AirLine(String destination, int numberReys, String typeAir, double timeDeparture, String days) {
-        this.destination = destination;
-        this.numberReys = numberReys;
-        this.typeAir = typeAir;
-        this.timeDeparture = timeDeparture;
-        this.days = days;
-    }
-
-    AirLine(String destination, int numberReys, String typeAir) {
-        this.destination = destination;
-        this.numberReys = numberReys;
-        this.typeAir = typeAir;
-    }
-
-    AirLine(int numberReys, String typeAir, double timeDeparture) {
-        this.numberReys = numberReys;
-        this.typeAir = typeAir;
-        this.timeDeparture = timeDeparture;
-
-    }
-
-//определяем геттеры и сеттеры
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setNumberReys(int numberReys) {
-        this.numberReys = numberReys;
-    }
-
-    public int getNumberReys() {
-        return numberReys;
-    }
-
-    public void setTypeAir(String typeAir) {
-        this.typeAir = typeAir;
-    }
-
-    public String getTypeAir() {
-        return typeAir;
-    }
-
-    public void setTimeDeparture(double timeDeparture) {
-        this.timeDeparture = timeDeparture;
-    }
-
-    public double getTimeDeparture() {
-        return timeDeparture;
-    }
-
-    public void setDays(String days) {
-        this.days = days;
-    }
-
-    public String getDays() {
-        return days;
-    }
-
-    @Override
-    public String toString() {
-        return "Лайнер" + " " + "Пункт назначения=" + " " + destination + " " + "номер рейса=" + numberReys + " "
-                + "тип самолета=" + " " + typeAir + " " + "Время вылета =" + timeDeparture + " "
-                + "День недели=" + " " + days;
-    }
-
-    
-}
