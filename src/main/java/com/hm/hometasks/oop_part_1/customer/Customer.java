@@ -106,7 +106,8 @@ public Customer(int bankAccount) {
 
     @Override
     public String toString() {
-        return "Покупатель" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
+        return "Покупатель" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " "
+                + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
                 + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " "
                 + "Банковский счет=" + " " + bankAccount;
     }

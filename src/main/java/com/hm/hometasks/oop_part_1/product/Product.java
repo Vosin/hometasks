@@ -106,9 +106,9 @@ public Product(String name, int upc, String company, double price) {
 
     @Override
     public String toString() {
-        return "Продукт" + " " + "id =" + " " + id + " " + "Наименование=" + name + " " + "UPC=" + " " + upc + " " + "Производитель =" + company + " "
-                + "Цена=" + " " + price + " " + "СрокХранения:" + " " + timeStorage + " Количество=" + " "
-                + count;
+        return "Продукт" + " " + "id =" + " " + id + " " + "Наименование=" + name + " " + "UPC=" + " "
+                + upc + " " + "Производитель =" + company + " " + "Цена=" + " " + price + " " + "СрокХранения:" + " "
+                + timeStorage + " Количество=" + " " + count;
     }
 
 }

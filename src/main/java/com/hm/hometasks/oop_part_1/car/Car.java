@@ -106,7 +106,8 @@ public Car(int id, String marka, int model) {
 
     @Override
     public String toString() {
-        return "Автомобиль" + " " + "id =" + " " + id + " " + "Марка=" + marka + " " + "Модель=" + " " + model + " " + "Год выпуска =" + yearVypuska + " "
+        return "Автомобиль" + " " + "id =" + " " + id + " " + "Марка=" + marka + " " + "Модель=" + " "
+                + model + " " + "Год выпуска =" + yearVypuska + " "
                 + "Цвет=" + " " + color + " " + "Цена:" + " " + price + " Регистрационный номер=" + " "
                 + regNumber;
     }

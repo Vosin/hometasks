@@ -94,7 +94,8 @@ public Bus(int numberBus, int numberMarshruta, String marka, int probeg) {
 
     @Override
     public String toString() {
-        return "Автобус" + " " + "Водитель=" + " " + surname + " " + "номер=" + numberBus + " " + "номер маршрута=" + " " + numberMarshruta + " " + "Марка =" + marka + " "
+        return "Автобус" + " " + "Водитель=" + " " + surname + " " + "номер=" + numberBus + " " + "номер маршрута=" + " "
+                + numberMarshruta + " " + "Марка =" + marka + " "
                 + "Год старта эксплуатации=" + " " + godStartEkspluatatsii + " " + "Пробег:" + " " + probeg;
     }
 

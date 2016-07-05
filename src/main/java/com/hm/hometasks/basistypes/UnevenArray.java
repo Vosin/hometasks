@@ -59,8 +59,9 @@ public static void vertically(int[][] arr) {
     }
 
 public static void horizontallyVertically(int[][] arr) {
-        horizontally(arr);
-        vertically(arr);
+    horizontally(arr);
+    vertically(arr);
     }
+
 
 }

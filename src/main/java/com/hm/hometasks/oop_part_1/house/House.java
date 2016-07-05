@@ -118,9 +118,9 @@ public House(String street, String typeBild, int termEkspluatatii) {
 
     @Override
     public String toString() {
-        return "Дом" + " " + "id =" + " " + id + " " + "Номер квартиры=" + numberFlat + " " + "Площадь=" + " " + square + " " + "Этаж =" + floor + " "
-                + "Количество комнат=" + " " + countRoom + " " + "Улица:" + " " + street + " Тип здания=" + " "
-                + typeBild + ": " + "Срок эксплуатации=" + " " + termEkspluatatii;
+        return "Дом" + " " + "id =" + " " + id + " " + "Номер квартиры=" + numberFlat + " " + "Площадь=" + " "
+                + square + " " + "Этаж =" + floor + " " + "Количество комнат=" + " " + countRoom + " " + "Улица:" + " "
+                + street + " Тип здания=" + " " + typeBild + ": " + "Срок эксплуатации=" + " " + termEkspluatatii;
     }
 }
 

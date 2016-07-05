@@ -102,9 +102,10 @@ public Train(int numberTrain, double timeDeparture) {
 
     @Override
     public String toString() {
-        return "Поезд" + " " + "Пункт назначения=" + " " + destination + " " + "номер=" + numberTrain + " " + "Время отправления=" + " " + timeDeparture + " " + "Количество общих мест =" + numberSeatsOveral + " "
-                + "Количество мест купе=" + " " + numberSeatsKupe + " " + "Количество мест плацкарт:" + " " + numberSeatsPlatskart + " Количество мест люкс=" + " "
-                + numberSeatsLuxury;
+        return "Поезд" + " " + "Пункт назначения=" + " " + destination + " " + "номер=" + numberTrain + " "
+                + "Время отправления=" + " " + timeDeparture + " " + "Количество общих мест =" + numberSeatsOveral + " "
+                + "Количество мест купе=" + " " + numberSeatsKupe + " " + "Количество мест плацкарт:" + " " 
+                + numberSeatsPlatskart + " Количество мест люкс=" + " "+ numberSeatsLuxury;
     }
 
 }

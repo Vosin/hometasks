@@ -114,9 +114,9 @@ public Patient(int creditCard) {
 
     @Override
     public String toString() {
-        return "Пациент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Телефон:" + " " + phone + "Номер медицинской карты=" + " " + medicinCard + " "
-                + "Диагноз=" + " " + diagnoz;
+        return "Пациент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " "
+                + name + " " + "Отчеcтво=" + patronimic + " " + "Адрес=" + " " + adress + " " + "Телефон:" + " "
+                + phone + "Номер медицинской карты=" + " " + medicinCard + " " + "Диагноз=" + " " + diagnoz;
     }
 }
 

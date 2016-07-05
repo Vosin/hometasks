@@ -136,9 +136,8 @@ public Phone(int creditCard) {
     @Override
     public String toString() {
         return "Абонент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " "
-                + "Дебет=" + " " + debet + " " + "Кредит = " + " " + kredit + " " + "Время городских переговоров = " + " "
-                + timeCity + " " + "Время междугородних преговоров= " + " " + timeBetweenCity;
+                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " "+"Дебет=" + " " + debet + " " + "Кредит = " + " "
+                + kredit + " " + "Время городских переговоров = " + " " + timeCity + " " + "Время междугородних преговоров= " + " " + timeBetweenCity;
     }
 
     @Override
