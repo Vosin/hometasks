@@ -54,56 +54,46 @@ public static int[][] createDim() {
 
 public static void printReverseOrder(int[][] arr) {
         for (int i = arr.length - 1; i > 0; i--) {
-            {
                 for (int j = arr[i].length - 1; j > 0; j--) {
                     System.out.println("Элемент массива: " + arr[i][j]);
                 }
             }
         }
 
-    }
-
 public static void printEvenElement(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            {
-                for (int j = arr[i].length - 1; j > 0; j--) {
+               for (int j = arr[i].length - 1; j > 0; j--) {
                     if (i % 2 == 0) {
                         if (arr[i][j] % 2 == 0) {
                             System.out.println("Четный элемент массива: " + arr[i][j]);
                         }
                     }
-                }
-
-            }
+             }
         }
     }
 
 public static void printUnevenElement(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            {
-                for (int j = arr[i].length - 1; j > 0; j--) {
+               for (int j = arr[i].length - 1; j > 0; j--) {
                     if (j % 2 != 0) {
                         if (arr[i][j] % 2 != 0) {
                             System.out.println("Нечетный элемент массива: " + arr[i][j]);
                         }
                     }
                 }
-
-            }
+            
         }
     }
 
 public static void printMultipleSeven(int[][] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            {
                 for (int j = arr[i].length - 1; j > 0; j--) {
                     if (i % 2 == 0) {
                         if (arr[i][j] % 7 == 0) {
                             sum += arr[i][j];
                         }
                     }
-                }
             }
         }
         System.out.println("Сумма элементов кратных 7  в четных строках: " + sum);
@@ -112,7 +102,7 @@ public static void printMultipleSeven(int[][] arr) {
 public static void printOperationThree(int[][] arr) {
         int operation = 0;
         for (int i = 0; i < arr.length; i++) {
-            {
+            
                 for (int j = arr[i].length - 1; j > 0; j--) {
                     if (i % 2 != 0) {
                         if (arr[i][j] % 3 == 0) {
@@ -120,8 +110,7 @@ public static void printOperationThree(int[][] arr) {
                         }
                     }
                 }
-            }
-        }
+         }
         System.out.println("Произведение элементов кратных 3  в нечетных строках: " + operation);
     }
 

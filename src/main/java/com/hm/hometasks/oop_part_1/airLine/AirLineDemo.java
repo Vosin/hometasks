@@ -76,6 +76,13 @@ public static void consolIO(AirLine[]airLines){
             } catch (Exception e) {
                 end = true;
             }
+            System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
+            int contunue = Integer.parseInt(sc.next());
+            if(contunue==1){
+                end = false;
+            }else{
+                end = true;
+            }
         }
 }
 //Cписок   рейсов   для   заданного   пункта назначения

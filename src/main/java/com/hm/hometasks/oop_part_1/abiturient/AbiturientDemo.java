@@ -42,7 +42,7 @@ public class AbiturientDemo {
         return at;
    }
 public static void consolIO(Abiturient[]abiturients){
-  Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Для списка   абитуриентов ,  имеющих  неудовлетворительные   оценки введите  : 1 ");
@@ -73,6 +73,13 @@ public static void consolIO(Abiturient[]abiturients){
                     }
                 }
             } catch (Exception e) {
+                end = true;
+            }
+            System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
+            int contunue = Integer.parseInt(sc.next());
+            if(contunue==1){
+                end = false;
+            }else{
                 end = true;
             }
         }  
