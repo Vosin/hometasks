@@ -22,14 +22,14 @@ import java.util.Scanner;
 public class StudentDemo {
 
     public static void main(String[] args) {
-        
-        Student [] students = createListStudent();
+
+        Student[] students = createListStudent();
         consolIO(students);
-       
+
     }
-    
- public static Student [] createListStudent(){
-     //заполняем объект студент данными
+
+    public static Student[] createListStudent() {
+        //заполняем объект студент данными
         Student s1 = new Student(1, "Иванов", "Иван", "Иванович", 1978, "ул.Корчагинцев 2", "123 45 67", "математический", 1, 1);
         Student s2 = new Student(2, "Петров", "Сергей", "Иванович", 1988, "ул.Блюхера 4", "123 88 67", "физический", 2, 3);
         Student s3 = new Student(3, "Сидоров", "Василий", "Митрофанович", 1980, "ул.Пушкинская44", "189 40 88", "химический", 3, 4);
@@ -41,12 +41,12 @@ public class StudentDemo {
         st[1] = s2;
         st[2] = s3;
         st[3] = s4;
-        st[4] = s5;  
+        st[4] = s5;
         return st;
     }
-    
-public static void consolIO(Student [] students){
-       Scanner sc = new Scanner(System.in);
+
+    public static void consolIO(Student[] students) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Для списка  студентов   заданного   факультета введите : 1 ");
@@ -87,16 +87,16 @@ public static void consolIO(Student [] students){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }  
+        }
     }
-    
+
 //Выводит список   студентов   заданного   факультета ;
-public static void printDepartment(Student[] arr, int dep) {
+    public static void printDepartment(Student[] arr, int dep) {
         String result;
         switch (dep) {
             case 1: {
@@ -127,14 +127,16 @@ public static void printDepartment(Student[] arr, int dep) {
         }
     }
 // Выводит списки   студентов   для   каждого   факультета   и   курса ;
-public static void printDepartmentCourse(Student[] arr) {
+
+    public static void printDepartmentCourse(Student[] arr) {
         Arrays.sort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i].toString());
         }
     }
 //Выводит список   студентов ,  родившихся   после заданного   года ;
-public static void printStudentAfterYear(Student[] arr, int birthDay) {
+
+    public static void printStudentAfterYear(Student[] arr, int birthDay) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getBirthDay() > birthDay) {
@@ -147,7 +149,8 @@ public static void printStudentAfterYear(Student[] arr, int birthDay) {
         }
     }
 //Выводит список   учебной   группы .
-public static void printGroup(Student[] arr, int numberGroup) {
+
+    public static void printGroup(Student[] arr, int numberGroup) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getGroup() == numberGroup) {
@@ -161,4 +164,3 @@ public static void printGroup(Student[] arr, int numberGroup) {
         }
     }
 }
-

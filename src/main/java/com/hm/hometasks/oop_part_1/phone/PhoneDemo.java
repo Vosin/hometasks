@@ -23,12 +23,13 @@ import java.util.Scanner;
 public class PhoneDemo {
 
     public static void main(String[] args) {
-       
-        Phone[]phones = createListPhones();
+
+        Phone[] phones = createListPhones();
         consolIO(phones);
-       }
-public static Phone[]createListPhones(){
-     //заполняем объект телефонов данными
+    }
+
+    public static Phone[] createListPhones() {
+        //заполняем объект телефонов данными
         Phone p1 = new Phone(1, "Глебов", "Иван", "Ильич", "ул.Северная 125", 6425, 100, 257, 20, 0);
         Phone p2 = new Phone(2, "Мышков", "Семен", "Федорович", "ул.Крутая 15", 8856, 0, 328, 15, 45);
         Phone p3 = new Phone(3, "Яковлев", "Валентин ", "Петрович", "ул.Крутая 15", 7835, 300, 1000, 120, 0);
@@ -42,9 +43,10 @@ public static Phone[]createListPhones(){
         ph[3] = p4;
         ph[4] = p5;
         return ph;
-}
-public static void consolIO(Phone[]phones){
-      Scanner sc = new Scanner(System.in);
+    }
+
+    public static void consolIO(Phone[] phones) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Сведения   об   абонентах ,  у   которых   время внутригородских   разговоров превышает   заданное нажмите : 1 ");
@@ -77,15 +79,16 @@ public static void consolIO(Phone[]phones){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
-}
+    }
 //Сведения   об   абонентах ,  у   которых   время внутригородских   разговоров превышает   заданное
-public static void printTimeCity(Phone[] arr, int countTimeCity) {
+
+    public static void printTimeCity(Phone[] arr, int countTimeCity) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getTimeCity() > countTimeCity) {
@@ -98,7 +101,8 @@ public static void printTimeCity(Phone[] arr, int countTimeCity) {
         }
     }
 //Сведения   об   абонентах ,  которые пользовались   междугородной   связью   
-public static void printTimeBetweenCity(Phone[] arr) {
+
+    public static void printTimeBetweenCity(Phone[] arr) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getTimeBetweenCity() > 0) {
@@ -111,7 +115,8 @@ public static void printTimeBetweenCity(Phone[] arr) {
         }
     }
 //Сведения   об   абонентах ,  в   алфавитном  порядке
-public static void printPhone(Phone[] arr) {
+
+    public static void printPhone(Phone[] arr) {
         Arrays.sort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i].toString());
@@ -119,4 +124,3 @@ public static void printPhone(Phone[] arr) {
     }
 
 }
-

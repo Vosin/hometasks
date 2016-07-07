@@ -20,10 +20,10 @@ public class Book {
     private String type;//тип
 
 //определяем конструкторы
- public Book() {
+    public Book() {
     }
 
-public Book(int id, String autor, String name, String izdatelstvo, int godIzdania, int countPage, double price, String type) {
+    public Book(int id, String autor, String name, String izdatelstvo, int godIzdania, int countPage, double price, String type) {
         this.id = id;
         this.autor = autor;
         this.name = name;
@@ -35,14 +35,14 @@ public Book(int id, String autor, String name, String izdatelstvo, int godIzdani
 
     }
 
-public Book(String autor, String name, String izdatelstvo, int godIzdania) {
+    public Book(String autor, String name, String izdatelstvo, int godIzdania) {
         this.autor = autor;
         this.name = name;
         this.izdatelstvo = izdatelstvo;
         this.godIzdania = godIzdania;
     }
 
-public Book(String autor, String name, String izdatelstvo, double price, String type) {
+    public Book(String autor, String name, String izdatelstvo, double price, String type) {
         this.autor = autor;
         this.name = name;
         this.izdatelstvo = izdatelstvo;

@@ -10,34 +10,37 @@ import java.util.Collections;
  *
  * @author Osin Vladimir
  */
-public class Client{
-     
+public class Client {
+
     private double amount;//сумма всех счетов
     private double amountPositivBalans;//сумма всех счетов c положительным балансом
     private double amountNegativBalans;//сумма всех счетов c отриц балансом
-  
+
     public double getAmount() {
-        return amount ;
+        return amount;
     }
+
     public double getAmountPositivBalans() {
-        return amountPositivBalans ;
+        return amountPositivBalans;
     }
-     public double getAmountNegativBalans() {
-        return amountNegativBalans ;
+
+    public double getAmountNegativBalans() {
+        return amountNegativBalans;
     }
     private ArrayList<Account> accounts = new ArrayList<Account>();
-   //определяем массив счетов
+    //определяем массив счетов
+
     public Client addAccount(Account account) {
         accounts.add(account);
         amount += account.getAmmount();
-        if(account.getBalans()>0){
-        amountPositivBalans += account.getAmmount();   
-        }else{
-          amountNegativBalans += account.getAmmount(); 
+        if (account.getBalans() > 0) {
+            amountPositivBalans += account.getAmmount();
+        } else {
+            amountNegativBalans += account.getAmmount();
         }
         return this;
     }
-         
+
 //сортировка счетов по сумме
     public void sortAccount() {
 
@@ -48,10 +51,11 @@ public class Client{
         }
     }
 //найти счета у клиента
+
     public void findAccount(int status) {
         int flg = 0;
         for (int i = 0; i < accounts.size(); i++) {
-              if (accounts.get(i).getStatus()== status) {
+            if (accounts.get(i).getStatus() == status) {
                 System.out.println(accounts.get(i).toString());
                 flg = 1;
             }

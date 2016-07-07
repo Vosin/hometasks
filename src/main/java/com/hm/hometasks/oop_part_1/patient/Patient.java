@@ -20,10 +20,10 @@ public class Patient {
     private String diagnoz;//диагноз
 
 //определяем конструкторы
-public Patient() {
+    public Patient() {
     }
 
- public Patient(int id, String surname, String name, String patronimic, String adress, int medicinCard, String phone, String diagnoz) {
+    public Patient(int id, String surname, String name, String patronimic, String adress, int medicinCard, String phone, String diagnoz) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -34,14 +34,14 @@ public Patient() {
         this.diagnoz = diagnoz;
     }
 
-public Patient(String surname, String name, String patronimic, int creditCard) {
+    public Patient(String surname, String name, String patronimic, int creditCard) {
         this.surname = surname;
         this.name = name;
         this.patronimic = patronimic;
         this.medicinCard = medicinCard;
     }
 
-public Patient(int creditCard) {
+    public Patient(int creditCard) {
         this.medicinCard = medicinCard;
 
     }
@@ -119,4 +119,3 @@ public Patient(int creditCard) {
                 + phone + "Номер медицинской карты=" + " " + medicinCard + " " + "Диагноз=" + " " + diagnoz;
     }
 }
-

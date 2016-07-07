@@ -15,31 +15,33 @@ import java.util.Scanner;
  * @author OsinVladimir
  */
 public class InsuranceLiabilitiesDemo {
-     public  void InsuranceLiabilitiesInit() {
-        
+
+    public void InsuranceLiabilitiesInit() {
+
         Contract contract = createContract();
-        System.out.println("Стоимость договора  " + " " +contract.getPrice()+" "+"грн");
+        System.out.println("Стоимость договора  " + " " + contract.getPrice() + " " + "грн");
         consolIO(contract);
-       
-     }
-     public static Contract createContract(){
-        Commitment  voluntary = new VoluntaryCommitment(145.25,2,1000,"Иванов");
-        Commitment  compulsory= new CompulsoryCommitment(105.35,5,10000,"Сидоров");
-        Commitment  social = new SocialCommitment(885.25,6,100000,"Петров");
-        Commitment  voluntary1 = new VoluntaryCommitment(1000.00,3,12500,"Яковлев");
-        Commitment  social1 = new SocialCommitment(325.25,4,50000,"Козлов");
-   
-        
+
+    }
+
+    public static Contract createContract() {
+        Commitment voluntary = new VoluntaryCommitment(145.25, 2, 1000, "Иванов");
+        Commitment compulsory = new CompulsoryCommitment(105.35, 5, 10000, "Сидоров");
+        Commitment social = new SocialCommitment(885.25, 6, 100000, "Петров");
+        Commitment voluntary1 = new VoluntaryCommitment(1000.00, 3, 12500, "Яковлев");
+        Commitment social1 = new SocialCommitment(325.25, 4, 50000, "Козлов");
+
         //создаем договор
         Contract сontract = new Contract();
         сontract.addCommitment(voluntary);
         сontract.addCommitment(compulsory);
         сontract.addCommitment(social);
         сontract.addCommitment(voluntary1);
-        сontract.addCommitment(social1);   
+        сontract.addCommitment(social1);
         return сontract;
-     }
-     public static void consolIO(Contract contract){
+    }
+
+    public static void consolIO(Contract contract) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -69,17 +71,11 @@ public class InsuranceLiabilitiesDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
-     }
+    }
 }
-
-
-
-
-
-

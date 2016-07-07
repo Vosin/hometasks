@@ -20,46 +20,69 @@ public class UnevenArray {
         int[][] array = createDim();
         System.out.println("Печать в виде треугольника:" + " ");
         printTriangle(array);
-//        System.out.println("Печать по горизонтали:" + " ");
-//        horizontally(array);
-//        System.out.println("Печать по вертикали:" + " ");
-//        vertically(array);
+        System.out.println("Отражение по горизонтали:" + " ");
+        mirrorHorizontally(array);
+        System.out.println("Отражение по вертикали:" + " ");
+        mirrorVertically(array);
 //        System.out.println("Печать одновременно по горизонтали и по  вертикали:" + " ");
 //        horizontallyVertically(array);
     }
 
-public static int[][] createDim() {
+    public static int[][] createDim() {
         int[][] array = new int[5][];
-         for(int i = 0;i<5;i++){
-            array[i]= new int [i+1];
+        for (int i = 0; i < 5; i++) {
+            array[i] = new int[i + 1];
         }
         return array;
     }
-public static void printTriangle(int[][] arr) {
-       for (int i = 0; i < arr.length; i++) {
+
+    public static void printTriangle(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
     }
-public static void horizontally(int[][] arr) {
-        System.out.println(Arrays.deepToString(arr));
-    }
 
-public static void vertically(int[][] arr) {
+    public static void mirrorHorizontally(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.println(arr[i][j] + " ");
+                if ((i == 0) & (j == 0)) {
+                    System.out.print(" " + " " + " " + " " + " " + " " + " " + " " + arr[i][j]);
+                } else if ((i == 1) & (j == 0)) {
+                    System.out.print(" " + " " + " " + " " + " " + " " + arr[i][j]);
+                } else if ((i == 1) & (j == 1)) {
+                    System.out.print(" " + arr[i][j]);
+                } else if ((i == 2) & (j == 0)) {
+                    System.out.print(" " + " " + " " + " " + arr[i][j]);
+                } else if ((i == 2) & (j == 1)) {
+                    System.out.print(" " + arr[i][j]);
+                } else if ((i == 2) & (j == 2)) {
+                    System.out.print(" " + arr[i][j]);
+                } else if ((i == 3) & (j == 0)) {
+                    System.out.print(" " + " " + arr[i][j]);
+                } else if ((i == 3) & (j == 1)) {
+                    System.out.print(" " + arr[i][j]);
+                } else if ((i == 3) & (j == 2)) {
+                    System.out.print(" " + arr[i][j]);
+                } else if ((i == 3) & (j == 3)) {
+                    System.out.print(" " + arr[i][j]);
+                } else {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static void mirrorVertically(int[][] arr) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = arr[i].length - 1; j >= 0; j--) {
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
     }
-
-public static void horizontallyVertically(int[][] arr) {
-    horizontally(arr);
-    vertically(arr);
-    }
-
-
 }

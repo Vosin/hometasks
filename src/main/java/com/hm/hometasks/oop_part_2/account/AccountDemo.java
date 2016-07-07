@@ -16,26 +16,29 @@ import java.util.Scanner;
  * @author Osin Vladimir
  */
 public class AccountDemo {
-      public  void AccountInit() {
+
+    public void AccountInit() {
         Client client = createClient();
-        System.out.println("Общиая сумма счетов = "+client.getAmount()+" "
-       +"Сумма по положительному сальдо =  "+" "+client.getAmountPositivBalans()+" "
-       +"Сумма по отрицательному сальдо =  "+" "+client.getAmountNegativBalans());        
+        System.out.println("Общиая сумма счетов = " + client.getAmount() + " "
+                + "Сумма по положительному сальдо =  " + " " + client.getAmountPositivBalans() + " "
+                + "Сумма по отрицательному сальдо =  " + " " + client.getAmountNegativBalans());
         consolIO(client);
-     }
-     public static Client createClient(){
-        Account current = new CurrentAccount(12000.00,1,1000);
-        Account depozit = new DepozitAccount(100000.00,1,0);
-        Account card = new CardAccount(0.00,0,-1000);
-     
+    }
+
+    public static Client createClient() {
+        Account current = new CurrentAccount(12000.00, 1, 1000);
+        Account depozit = new DepozitAccount(100000.00, 1, 0);
+        Account card = new CardAccount(0.00, 0, -1000);
+
         //создаем клиенту счета
         Client client = new Client();
         client.addAccount(current);
         client.addAccount(depozit);
         client.addAccount(current);
         return client;
-     }
-     public static void consolIO(Client client){
+    }
+
+    public static void consolIO(Client client) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -60,11 +63,12 @@ public class AccountDemo {
                 }
             } catch (Exception e) {
                 end = true;
-            }System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
+            }
+            System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }

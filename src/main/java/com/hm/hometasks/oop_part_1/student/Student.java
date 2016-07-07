@@ -7,7 +7,6 @@ package com.hm.hometasks.oop_part_1.student;
  *
  * @author Osin Vladimir
  */
-
 public class Student implements Comparable {
 //определяем поля класса"
 
@@ -23,10 +22,10 @@ public class Student implements Comparable {
     private int group;//группа
 //определяем конструкторы
 
-   public Student() {
+    public Student() {
     }
 
-   public Student(int id, String surname, String name, String patronimic, int birthDay, String adress, String phone, String department, int course, int group) {
+    public Student(int id, String surname, String name, String patronimic, int birthDay, String adress, String phone, String department, int course, int group) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -39,7 +38,7 @@ public class Student implements Comparable {
         this.group = group;
     }
 
-   public Student(int id, String surname, String name, String patronimic, int birthDay) {
+    public Student(int id, String surname, String name, String patronimic, int birthDay) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -47,7 +46,7 @@ public class Student implements Comparable {
         this.birthDay = birthDay;
     }
 
-   public Student(int id, String surname, String name, String patronimic, int birthDay, String adress, String phone) {
+    public Student(int id, String surname, String name, String patronimic, int birthDay, String adress, String phone) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -142,8 +141,8 @@ public class Student implements Comparable {
     @Override
     public String toString() {
         return "Студент" + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-        + "ДеньРождения" + " " + birthDay + " " + "Адрес=" + " " + adress + " " + "Телефон=" + " " + phone + " "
-        + "Факультет=" + " " + department + " " + "Курс=" + " " + course + " " + "Группа=" + " " + group;
+                + "ДеньРождения" + " " + birthDay + " " + "Адрес=" + " " + adress + " " + "Телефон=" + " " + phone + " "
+                + "Факультет=" + " " + department + " " + "Курс=" + " " + course + " " + "Группа=" + " " + group;
     }
 
     @Override

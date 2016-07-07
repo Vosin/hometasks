@@ -10,36 +10,36 @@ package com.hm.hometasks.oop_part_1.product;
 public class Product {
 //определяем поля класса
 
-    private int    id;//ид
+    private int id;//ид
     private String name;//имя
-    private int    upc;//юпс
+    private int upc;//юпс
     private String company;//произволитель
     private double price;//цена
-    private int    timeStorage;//в днях
-    private int    count;//количество
+    private int timeStorage;//в днях
+    private int count;//количество
 
 //определяем конструкторы
- public Product() {
+    public Product() {
     }
 
-public Product(int id, String name, int upc, String company, double price, int timeStorage, int count) {
-        this.id          = id;
-        this.name        = name;
-        this.upc         = upc;
-        this.company     = company;
-        this.price       = price;
+    public Product(int id, String name, int upc, String company, double price, int timeStorage, int count) {
+        this.id = id;
+        this.name = name;
+        this.upc = upc;
+        this.company = company;
+        this.price = price;
         this.timeStorage = timeStorage;
-        this.count       = count;
+        this.count = count;
     }
 
-public Product(String name, int upc, String company) {
+    public Product(String name, int upc, String company) {
         this.name = name;
         this.upc = upc;
         this.company = company;
 
     }
 
-public Product(String name, int upc, String company, double price) {
+    public Product(String name, int upc, String company, double price) {
         this.name = name;
         this.upc = upc;
         this.company = company;

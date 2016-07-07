@@ -18,10 +18,10 @@ public class Bus {
     private int probeg;// в километрах
 
 //определяем конструкторы
-public Bus() {
+    public Bus() {
     }
 
-public Bus(String surname, int numberBus, int numberMarshruta, String marka, int godStartEkspluatatsii, int probeg) {
+    public Bus(String surname, int numberBus, int numberMarshruta, String marka, int godStartEkspluatatsii, int probeg) {
         this.surname = surname;
         this.numberBus = numberBus;
         this.numberMarshruta = numberMarshruta;
@@ -30,13 +30,13 @@ public Bus(String surname, int numberBus, int numberMarshruta, String marka, int
         this.probeg = probeg;
     }
 
-public Bus(String surname, int numberBus, int numberMarshruta) {
+    public Bus(String surname, int numberBus, int numberMarshruta) {
         this.surname = surname;
         this.numberBus = numberBus;
         this.numberMarshruta = numberMarshruta;
     }
 
-public Bus(int numberBus, int numberMarshruta, String marka, int probeg) {
+    public Bus(int numberBus, int numberMarshruta, String marka, int probeg) {
         this.numberBus = numberBus;
         this.numberMarshruta = numberMarshruta;
         this.marka = marka;
@@ -104,4 +104,3 @@ public Bus(int numberBus, int numberMarshruta, String marka, int probeg) {
         return currentYear - godStartEkspluatatsii;
     }
 }
-

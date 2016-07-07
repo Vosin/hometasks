@@ -23,11 +23,12 @@ import java.util.Scanner;
 public class TrainDemo {
 
     public static void main(String[] args) {
-     Train[]trains = createListTrains();
-     consolIO(trains);
+        Train[] trains = createListTrains();
+        consolIO(trains);
     }
-    public static Train[]createListTrains(){
-      //заполняем объект поезд данными
+
+    public static Train[] createListTrains() {
+        //заполняем объект поезд данными
         Train tr1 = new Train("Москва", 3, 14.20, 10, 30, 50, 60);
         Train tr2 = new Train("Питер", 5, 18.30, 15, 15, 15, 25);
         Train tr3 = new Train("Киев", 3, 22.00, 0, 25, 148, 56);
@@ -42,8 +43,9 @@ public class TrainDemo {
         tr[4] = tr5;
         return tr;
     }
-    public static void consolIO(Train[]trains){
-      Scanner sc = new Scanner(System.in);
+
+    public static void consolIO(Train[] trains) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   поездов ,  следующих   до   заданного  пункта   назначения  введите  : 1 ");
@@ -81,15 +83,16 @@ public class TrainDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }  
+        }
     }
 //Cписок   поездов ,  следующих   до   заданного  пункта   назначения
-public static void printDestination(Train[] arr, int destination) {
+
+    public static void printDestination(Train[] arr, int destination) {
         String result;
         switch (destination) {
             case 1: {
@@ -124,7 +127,8 @@ public static void printDestination(Train[] arr, int destination) {
         }
     }
 //Cписок   поездов ,  следующих   до   заданного  пункта   назначения   и   отправляющихся   после  заданного   часа
-public static void printTimeDestination(Train[] arr, int destination, double timeDeparture) {
+
+    public static void printTimeDestination(Train[] arr, int destination, double timeDeparture) {
         String result;
         switch (destination) {
             case 1: {
@@ -159,7 +163,8 @@ public static void printTimeDestination(Train[] arr, int destination, double tim
         }
     }
 //Список   поездов ,  отправляющихся   до заданного   пункта   назначения и имеющих общие   места1
-public static void printNumberSeatsOveral(Train[] arr, int destination) {
+
+    public static void printNumberSeatsOveral(Train[] arr, int destination) {
         String result;
         switch (destination) {
             case 1: {
@@ -195,4 +200,3 @@ public static void printNumberSeatsOveral(Train[] arr, int destination) {
     }
 
 }
-

@@ -21,11 +21,12 @@ import java.util.Scanner;
 public class BusDemo {
 
     public static void main(String[] args) {
-     Bus[]buses = createListBuses();
-     consolIO(buses);
+        Bus[] buses = createListBuses();
+        consolIO(buses);
     }
-    public static Bus[]createListBuses(){
-      //заполняем объект автобус данными
+
+    public static Bus[] createListBuses() {
+        //заполняем объект автобус данными
         Bus bs1 = new Bus("Петров В.И", 3, 14, "Лаз", 1998, 1000);
         Bus bs2 = new Bus("Сидоров А.В", 15, 18, "Богдан", 2005, 1100);
         Bus bs3 = new Bus("Джугашвили А.Юв", 23, 22, "Лаз", 2000, 5000);
@@ -40,8 +41,9 @@ public class BusDemo {
         bs[4] = bs5;
         return bs;
     }
-    public static void consolIO(Bus[]buses){
-         Scanner sc = new Scanner(System.in);
+
+    public static void consolIO(Bus[] buses) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   автобусов   для   заданного   номера маршрута  введите  : 1 ");
@@ -77,15 +79,16 @@ public class BusDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
     }
 //Cписок   автобусов   для   заданного   номера маршрута
-public static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
+
+    public static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getNumberMarshruta() == numberMarschruta) {
@@ -98,7 +101,8 @@ public static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
         }
     }
 //Список   автобусов ,  которые  эксплуатируются   больше   заданного   срока
- public static void printSrokEkspluatatsii(Bus[] arr, int srokEkspluatasii) {
+
+    public static void printSrokEkspluatatsii(Bus[] arr, int srokEkspluatasii) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].SrokEkspluatasii() > srokEkspluatasii) {
@@ -111,7 +115,8 @@ public static void printNumberMarshruta(Bus[] arr, int numberMarschruta) {
         }
     }
 //Список   автобусов ,  пробег   у   которых   больше  заданного   расстояния
-public static void printProbeg(Bus[] arr, int probeg) {
+
+    public static void printProbeg(Bus[] arr, int probeg) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getProbeg() > probeg) {
@@ -125,4 +130,3 @@ public static void printProbeg(Bus[] arr, int probeg) {
     }
 
 }
-

@@ -23,12 +23,13 @@ import java.util.Scanner;
 public class HouseDemo {
 
     public static void main(String[] args) {
-        House[]houses = createListHouses();
+        House[] houses = createListHouses();
         consolIO(houses);
-       
+
     }
-public static House[]createListHouses(){
-  //заполняем объект дом данными
+
+    public static House[] createListHouses() {
+        //заполняем объект дом данными
         House h1 = new House(1, 127, 55, 3, 3, "Широнинцев", "Многоэтажка", 100);
         House h2 = new House(2, 250, 65, 2, 2, "Тимуровцев", "Пятиэтажка", 50);
         House h3 = new House(3, 380, 45, 1, 1, "Героев труда", "Многоэтажка", 100);
@@ -42,9 +43,10 @@ public static House[]createListHouses(){
         hs[3] = h4;
         hs[4] = h5;
         return hs;
-}
-public static void consolIO(House[]houses){
-    Scanner sc = new Scanner(System.in);
+    }
+
+    public static void consolIO(House[] houses) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   квартир ,  имеющих   заданное   число  комнат нажмите: 1 ");
@@ -84,16 +86,17 @@ public static void consolIO(House[]houses){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
-  
-}
+
+    }
 //Печать квартир с заданным числом комнат
- public static void printFloor(House[] arr, int countRoom, int starFloor, int endFloor) {
+
+    public static void printFloor(House[] arr, int countRoom, int starFloor, int endFloor) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if ((arr[i].getCountRoom() == countRoom) & (arr[i].getFloor() > starFloor) & (arr[i].getFloor() < endFloor)) {
@@ -106,7 +109,8 @@ public static void consolIO(House[]houses){
         }
     }
 //Cписок   квартир ,  имеющих   заданное   число  комнат и расположенных  на   этаже ,  который   находится   в   заданном промежутке
- public static void printCountRoom(House[] arr, int countRoom) {
+
+    public static void printCountRoom(House[] arr, int countRoom) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getCountRoom() == countRoom) {
@@ -119,7 +123,8 @@ public static void consolIO(House[]houses){
         }
     }
 //Список   квартир ,  имеющих   площадь  превосходящую   заданную
- public static void printSquare(House[] arr, int square) {
+
+    public static void printSquare(House[] arr, int square) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getSquare() > square) {
@@ -132,4 +137,3 @@ public static void consolIO(House[]houses){
         }
     }
 }
-

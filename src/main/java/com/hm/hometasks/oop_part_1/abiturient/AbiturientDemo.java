@@ -20,13 +20,14 @@ import java.util.Scanner;
 public class AbiturientDemo {
 
     public static void main(String[] args) {
-        
-        Abiturient[]abiturients = createListAbiturients();
+
+        Abiturient[] abiturients = createListAbiturients();
         consolIO(abiturients);
-       
+
     }
-   public static Abiturient[]createListAbiturients(){
-      //заполняем объект абитурент данными
+
+    public static Abiturient[] createListAbiturients() {
+        //заполняем объект абитурент данными
         Abiturient a1 = new Abiturient(1, "Иванов", "Иван", "Иванович", "ул.Корчагинцев 2", 10, 8, 12, "123 45 67");
         Abiturient a2 = new Abiturient(2, "Петров", "Сергей", "Иванович", "ул.Блюхера 4", 4, 12, 8, "123 88 67");
         Abiturient a3 = new Abiturient(3, "Сидоров", "Василий", "Митрофанович", "ул.Пушкинская44", 6, 10, 12, "123 88 67");
@@ -40,8 +41,9 @@ public class AbiturientDemo {
         at[3] = a4;
         at[4] = a5;
         return at;
-   }
-public static void consolIO(Abiturient[]abiturients){
+    }
+
+    public static void consolIO(Abiturient[] abiturients) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -77,16 +79,17 @@ public static void consolIO(Abiturient[]abiturients){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }  
-    
-}
+        }
+
+    }
 //Печать списка с неудовлетворительными оценками
-public static void printAbiturient(Abiturient[] arr) {
+
+    public static void printAbiturient(Abiturient[] arr) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].badBall() == true) {
@@ -99,7 +102,8 @@ public static void printAbiturient(Abiturient[] arr) {
         }
     }
 //Печать у которых сумма баллов выше заданной
-public static void printSumBall(Abiturient[] arr, int count) {
+
+    public static void printSumBall(Abiturient[] arr, int count) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].sumAllBall() > count) {
                 System.out.println("Сумма баллов выше заданной");
@@ -111,7 +115,8 @@ public static void printSumBall(Abiturient[] arr, int count) {
         }
     }
 //самая высокая сумма баллов
-public static void printHighSumBall(Abiturient[] arr, int countAbiturient) {
+
+    public static void printHighSumBall(Abiturient[] arr, int countAbiturient) {
 
         int maxValue = 30;//задаем проходной балл
         int maxValue2 = 15;//задаем полупроходной балл
@@ -127,4 +132,3 @@ public static void printHighSumBall(Abiturient[] arr, int countAbiturient) {
         }
     }
 }
-

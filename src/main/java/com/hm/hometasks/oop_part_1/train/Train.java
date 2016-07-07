@@ -19,10 +19,10 @@ public class Train {
     private int numberSeatsLuxury;//число мест люкс
 
 //определяем конструкторы
- public Train() {
+    public Train() {
     }
 
-public Train(String destination, int numberTrain, double timeDeparture, int numberSeatsOveral, int numberSeatsKupe, int numberSeatsPlatskart, int numberSeatsLuxury) {
+    public Train(String destination, int numberTrain, double timeDeparture, int numberSeatsOveral, int numberSeatsKupe, int numberSeatsPlatskart, int numberSeatsLuxury) {
         this.destination = destination;
         this.numberTrain = numberTrain;
         this.timeDeparture = timeDeparture;
@@ -32,13 +32,13 @@ public Train(String destination, int numberTrain, double timeDeparture, int numb
         this.numberSeatsLuxury = numberSeatsLuxury;
     }
 
-public Train(String destination, int numberTrain, double timeDeparture) {
+    public Train(String destination, int numberTrain, double timeDeparture) {
         this.destination = destination;
         this.numberTrain = numberTrain;
         this.timeDeparture = timeDeparture;
     }
 
-public Train(int numberTrain, double timeDeparture) {
+    public Train(int numberTrain, double timeDeparture) {
         this.numberTrain = numberTrain;
         this.timeDeparture = timeDeparture;
     }
@@ -104,9 +104,8 @@ public Train(int numberTrain, double timeDeparture) {
     public String toString() {
         return "Поезд" + " " + "Пункт назначения=" + " " + destination + " " + "номер=" + numberTrain + " "
                 + "Время отправления=" + " " + timeDeparture + " " + "Количество общих мест =" + numberSeatsOveral + " "
-                + "Количество мест купе=" + " " + numberSeatsKupe + " " + "Количество мест плацкарт:" + " " 
-                + numberSeatsPlatskart + " Количество мест люкс=" + " "+ numberSeatsLuxury;
+                + "Количество мест купе=" + " " + numberSeatsKupe + " " + "Количество мест плацкарт:" + " "
+                + numberSeatsPlatskart + " Количество мест люкс=" + " " + numberSeatsLuxury;
     }
 
 }
-

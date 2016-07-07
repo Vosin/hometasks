@@ -53,8 +53,8 @@ public static int[][] createDim() {
     }
 
 public static void printReverseOrder(int[][] arr) {
-        for (int i = arr.length - 1; i > 0; i--) {
-                for (int j = arr[i].length - 1; j > 0; j--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+                for (int j = arr[i].length - 1; j >= 0; j--) {
                     System.out.println("Элемент массива: " + arr[i][j]);
                 }
             }
@@ -102,7 +102,6 @@ public static void printMultipleSeven(int[][] arr) {
 public static void printOperationThree(int[][] arr) {
         int operation = 0;
         for (int i = 0; i < arr.length; i++) {
-            
                 for (int j = arr[i].length - 1; j > 0; j--) {
                     if (i % 2 != 0) {
                         if (arr[i][j] % 3 == 0) {

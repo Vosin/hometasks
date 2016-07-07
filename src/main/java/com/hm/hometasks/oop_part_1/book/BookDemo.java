@@ -20,11 +20,12 @@ import java.util.Scanner;
 public class BookDemo {
 
     public static void main(String[] args) {
-        Book[]books = createListBooks();
+        Book[] books = createListBooks();
         consolIO(books);
     }
-    public static Book[]createListBooks(){
-      //заполняем объект книга данными
+
+    public static Book[] createListBooks() {
+        //заполняем объект книга данными
         Book b1 = new Book(1, "Кир Булычев", "Алиса", "Москва", 1981, 100, 150.25, "мягкий");
         Book b2 = new Book(2, "Иван Семенов", "Алиса", "Питер", 1978, 300, 300.45, "твердый");
         Book b3 = new Book(3, "Петр Сизов", "Алиса", "Питер", 1936, 200, 500.2, "твердый");
@@ -39,8 +40,9 @@ public class BookDemo {
         bk[4] = b5;
         return bk;
     }
-    public static void consolIO(Book[]books){
-         Scanner sc = new Scanner(System.in);
+
+    public static void consolIO(Book[] books) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   книг   заданного   автора введите  : 1 ");
@@ -76,15 +78,16 @@ public class BookDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
     }
 //список книг заданного автора
-public static void printAutor(Book[] arr, int a) {
+
+    public static void printAutor(Book[] arr, int a) {
         String result;
         switch (a) {
             case 1: {
@@ -119,7 +122,8 @@ public static void printAutor(Book[] arr, int a) {
         }
     }
 //Список книг по издательству
-public static void printIzdatelstvo(Book[] arr, int iz) {
+
+    public static void printIzdatelstvo(Book[] arr, int iz) {
         String result;
         switch (iz) {
             case 1: {
@@ -150,7 +154,8 @@ public static void printIzdatelstvo(Book[] arr, int iz) {
         }
     }
 //Список книг по году
-public static void printYear(Book[] arr, int year) {
+
+    public static void printYear(Book[] arr, int year) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getGodIzdania() > year) {
@@ -164,4 +169,3 @@ public static void printYear(Book[] arr, int year) {
     }
 
 }
-

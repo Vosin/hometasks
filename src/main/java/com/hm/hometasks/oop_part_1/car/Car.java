@@ -19,10 +19,10 @@ public class Car {
     private int regNumber;//рег номер
 
 //определяем конструкторы
-public Car() {
+    public Car() {
     }
 
-public Car(int id, String marka, int model, int yearVypuska, String color, double price, int regNumber) {
+    public Car(int id, String marka, int model, int yearVypuska, String color, double price, int regNumber) {
         this.id = id;
         this.marka = marka;
         this.model = model;
@@ -32,7 +32,7 @@ public Car(int id, String marka, int model, int yearVypuska, String color, doubl
         this.price = regNumber;
     }
 
-public Car(int id, String marka, int model, int yearVypuska, String color) {
+    public Car(int id, String marka, int model, int yearVypuska, String color) {
         this.id = id;
         this.marka = marka;
         this.model = model;
@@ -41,7 +41,7 @@ public Car(int id, String marka, int model, int yearVypuska, String color) {
 
     }
 
-public Car(int id, String marka, int model) {
+    public Car(int id, String marka, int model) {
         this.id = id;
         this.marka = marka;
         this.model = model;
@@ -117,4 +117,3 @@ public Car(int id, String marka, int model) {
         return currentYear - yearVypuska;
     }
 }
-

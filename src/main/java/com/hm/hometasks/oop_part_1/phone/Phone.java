@@ -22,10 +22,10 @@ public class Phone implements Comparable {
     private int timeBetweenCity;//время в минутах
 
 //определяем конструкторы
-public Phone() {
+    public Phone() {
     }
 
-public Phone(int id, String surname, String name, String patronimic, String adress, int creditCard, int debet, int kredit, int timeCity, int timeBetweenCity) {
+    public Phone(int id, String surname, String name, String patronimic, String adress, int creditCard, int debet, int kredit, int timeCity, int timeBetweenCity) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -39,14 +39,14 @@ public Phone(int id, String surname, String name, String patronimic, String adre
 
     }
 
-public Phone(String surname, String name, String patronimic, int creditCard) {
+    public Phone(String surname, String name, String patronimic, int creditCard) {
         this.surname = surname;
         this.name = name;
         this.patronimic = patronimic;
         this.creditCard = creditCard;
     }
 
-public Phone(int creditCard) {
+    public Phone(int creditCard) {
         this.creditCard = creditCard;
 
     }
@@ -136,7 +136,7 @@ public Phone(int creditCard) {
     @Override
     public String toString() {
         return "Абонент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " "+"Дебет=" + " " + debet + " " + "Кредит = " + " "
+                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " " + "Дебет=" + " " + debet + " " + "Кредит = " + " "
                 + kredit + " " + "Время городских переговоров = " + " " + timeCity + " " + "Время междугородних преговоров= " + " " + timeBetweenCity;
     }
 
@@ -153,4 +153,3 @@ public Phone(int creditCard) {
     }
 
 }
-

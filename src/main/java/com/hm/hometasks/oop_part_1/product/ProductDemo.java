@@ -22,11 +22,12 @@ import java.util.Scanner;
 public class ProductDemo {
 
     public static void main(String[] args) {
-      Product[]products = createLisProducts();
-      conscolIO(products);
+        Product[] products = createLisProducts();
+        conscolIO(products);
     }
-    public static Product[]createLisProducts(){
-         //заполняем объект продукт данными
+
+    public static Product[] createLisProducts() {
+        //заполняем объект продукт данными
         Product pt1 = new Product(1, "Молоко", 3, "БалМолоко", 10.55, 30, 420);
         Product pt2 = new Product(2, "Кефир", 5, "КрасноградМолоко", 15.25, 15, 156);
         Product pt3 = new Product(3, "Сметана", 3, "БалМолоко", 20.44, 25, 148);
@@ -41,7 +42,8 @@ public class ProductDemo {
         pt[4] = pt5;
         return pt;
     }
-    public static void conscolIO(Product[]products){
+
+    public static void conscolIO(Product[] products) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -80,15 +82,16 @@ public class ProductDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        } 
+        }
     }
 //Cписок   товаров   для   заданного наименования
- public static void printTovar(Product[] arr, int tovar) {
+
+    public static void printTovar(Product[] arr, int tovar) {
         String result;
         switch (tovar) {
             case 1: {
@@ -123,7 +126,8 @@ public class ProductDemo {
         }
     }
 //Cписок   товаров   для   заданного наименования ,  цена   которых   не   превос ­ ходит заданную
-public static void printPrice(Product[] arr, int tovar, double price) {
+
+    public static void printPrice(Product[] arr, int tovar, double price) {
         String result;
         switch (tovar) {
             case 1: {
@@ -158,7 +162,8 @@ public static void printPrice(Product[] arr, int tovar, double price) {
         }
     }
 //Cписок   товаров ,  срок   хранения   которых больше   заданного
- public static void printTimeStorage(Product[] arr, int timeStorage) {
+
+    public static void printTimeStorage(Product[] arr, int timeStorage) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if ((arr[i].getTimeStorage() > timeStorage)) {
@@ -172,4 +177,3 @@ public static void printPrice(Product[] arr, int tovar, double price) {
     }
 
 }
-

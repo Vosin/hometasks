@@ -19,11 +19,12 @@ import java.util.Scanner;
 public class CarDemo {
 
     public static void main(String[] args) {
-      Car[]cars = createListCars();
-      consolIO(cars);
+        Car[] cars = createListCars();
+        consolIO(cars);
     }
-public static Car[]createListCars(){
-    //заполняем объект машина данными
+
+    public static Car[] createListCars() {
+        //заполняем объект машина данными
         Car c1 = new Car(1, "Волга", 3, 1981, "черный", 1500.25, 1452);
         Car c2 = new Car(2, "Жигули", 5, 1978, "белый", 3000.45, 2589);
         Car c3 = new Car(3, "Москвич", 3, 1936, "зеленый", 5000.25, 4578);
@@ -37,9 +38,10 @@ public static Car[]createListCars(){
         cr[3] = c4;
         cr[4] = c5;
         return cr;
-}
-public static void consolIO(Car[]cars){
-    Scanner sc = new Scanner(System.in);
+    }
+
+    public static void consolIO(Car[] cars) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   автомобилей   заданной   марки введите  : 1 ");
@@ -79,15 +81,16 @@ public static void consolIO(Car[]cars){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        } 
-}
+        }
+    }
 //Cписок   автомобилей   заданной   марки
- public static void printMarka(Car[] arr, int marka) {
+
+    public static void printMarka(Car[] arr, int marka) {
         String result;
         switch (marka) {
             case 1: {
@@ -122,7 +125,8 @@ public static void consolIO(Car[]cars){
         }
     }
 //Cписок   автомобилей   заданной   модели которые эксплуатируются   больше  n лет
-public static void printModel(Car[] arr, int model, int countYear) {
+
+    public static void printModel(Car[] arr, int model, int countYear) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if ((arr[i].getModel() == model) & (arr[i].countYearEkspl() > countYear)) {
@@ -135,7 +139,8 @@ public static void printModel(Car[] arr, int model, int countYear) {
         }
     }
 //Список   автомобилей   заданного  года  выпуска ,цена  которых больше указанной
-public static void printYear(Car[] arr, int yearVypuska, double price) {
+
+    public static void printYear(Car[] arr, int yearVypuska, double price) {
         int flg = 0;
         for (int i = 0; i < arr.length; i++) {
             if ((arr[i].getYearVypuska() == yearVypuska) & (arr[i].getPrice() > price)) {
@@ -149,4 +154,3 @@ public static void printYear(Car[] arr, int yearVypuska, double price) {
     }
 
 }
-

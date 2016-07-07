@@ -17,10 +17,10 @@ public class AirLine {
     private String days;//дни
 
 //определяем конструкторы
-public AirLine() {
+    public AirLine() {
     }
 
-public AirLine(String destination, int numberReys, String typeAir, double timeDeparture, String days) {
+    public AirLine(String destination, int numberReys, String typeAir, double timeDeparture, String days) {
         this.destination = destination;
         this.numberReys = numberReys;
         this.typeAir = typeAir;
@@ -28,13 +28,13 @@ public AirLine(String destination, int numberReys, String typeAir, double timeDe
         this.days = days;
     }
 
-public AirLine(String destination, int numberReys, String typeAir) {
+    public AirLine(String destination, int numberReys, String typeAir) {
         this.destination = destination;
         this.numberReys = numberReys;
         this.typeAir = typeAir;
     }
 
-public AirLine(int numberReys, String typeAir, double timeDeparture) {
+    public AirLine(int numberReys, String typeAir, double timeDeparture) {
         this.numberReys = numberReys;
         this.typeAir = typeAir;
         this.timeDeparture = timeDeparture;
@@ -89,6 +89,4 @@ public AirLine(int numberReys, String typeAir, double timeDeparture) {
                 + "День недели=" + " " + days;
     }
 
-    
 }
-

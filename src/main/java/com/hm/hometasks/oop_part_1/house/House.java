@@ -20,10 +20,10 @@ public class House {
     private int termEkspluatatii;//срок эксплуатации
 
 //определяем конструкторы
- public House() {
+    public House() {
     }
 
-public House(int id, int numberFlat, int square, int floor, int countRoom, String street, String typeBild, int termEkspluatatii) {
+    public House(int id, int numberFlat, int square, int floor, int countRoom, String street, String typeBild, int termEkspluatatii) {
         this.id = id;
         this.numberFlat = numberFlat;
         this.square = square;
@@ -35,7 +35,7 @@ public House(int id, int numberFlat, int square, int floor, int countRoom, Strin
 
     }
 
-public House(int numberFlat, int square, int floor, int countRoom, String street) {
+    public House(int numberFlat, int square, int floor, int countRoom, String street) {
         this.numberFlat = numberFlat;
         this.square = square;
         this.floor = floor;
@@ -44,7 +44,7 @@ public House(int numberFlat, int square, int floor, int countRoom, String street
 
     }
 
-public House(String street, String typeBild, int termEkspluatatii) {
+    public House(String street, String typeBild, int termEkspluatatii) {
         this.street = street;
         this.typeBild = typeBild;
         this.termEkspluatatii = termEkspluatatii;
@@ -123,4 +123,3 @@ public House(String street, String typeBild, int termEkspluatatii) {
                 + street + " Тип здания=" + " " + typeBild + ": " + "Срок эксплуатации=" + " " + termEkspluatatii;
     }
 }
-

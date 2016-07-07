@@ -19,11 +19,12 @@ import java.util.Scanner;
 public class AirLineDemo {
 
     public static void main(String[] args) {
-        AirLine[]airLines = createListAirLines();
+        AirLine[] airLines = createListAirLines();
         consolIO(airLines);
     }
-public static AirLine[]createListAirLines(){
-  //заполняем объект лайнер данными
+
+    public static AirLine[] createListAirLines() {
+        //заполняем объект лайнер данными
         AirLine ar1 = new AirLine("Москва", 3, "Пассажирский", 12.00, "Понедельник");
         AirLine ar2 = new AirLine("Питер", 15, "Грузовой", 15.45, "Вторник");
         AirLine ar3 = new AirLine("Вашингтон", 23, "Пассажирский", 16.00, "Пятница");
@@ -37,9 +38,10 @@ public static AirLine[]createListAirLines(){
         ar[3] = ar4;
         ar[4] = ar5;
         return ar;
-}
-public static void consolIO(AirLine[]airLines){
-      Scanner sc = new Scanner(System.in);
+    }
+
+    public static void consolIO(AirLine[] airLines) {
+        Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
             System.out.println("Cписок   рейсов   для   заданного   пункта назначения   введите  : 1 ");
@@ -78,15 +80,16 @@ public static void consolIO(AirLine[]airLines){
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
-}
+    }
 //Cписок   рейсов   для   заданного   пункта назначения
-public static void printDestination(AirLine[] arr, int destination) {
+
+    public static void printDestination(AirLine[] arr, int destination) {
         String result;
         switch (destination) {
             case 1: {
@@ -121,7 +124,8 @@ public static void printDestination(AirLine[] arr, int destination) {
         }
     }
 //Cписок   рейсов   для   заданного   дня   недели
-public static void printDays(AirLine[] arr, int day) {
+
+    public static void printDays(AirLine[] arr, int day) {
         String result;
         switch (day) {
             case 1: {
@@ -168,7 +172,8 @@ public static void printDays(AirLine[] arr, int day) {
         }
     }
 //Cписок   рейсов   для   заданного   дня   недели время   вылета   для   которых   больше   заданного
-public static void printTimeDeparture(AirLine[] arr, int day, double timeDepature) {
+
+    public static void printTimeDeparture(AirLine[] arr, int day, double timeDepature) {
         String result;
         switch (day) {
             case 1: {
@@ -216,4 +221,3 @@ public static void printTimeDeparture(AirLine[] arr, int day, double timeDepatur
     }
 
 }
-

@@ -21,10 +21,10 @@ public class Abiturient {
     private int ballBiologiya;//балл по биологии
 
 //определяем конструкторы
- public Abiturient() {
+    public Abiturient() {
     }
 
- public Abiturient(int id, String surname, String name, String patronimic, String adress, int ballFizika, int ballChimiya, int ballBiologiya, String phone) {
+    public Abiturient(int id, String surname, String name, String patronimic, String adress, int ballFizika, int ballChimiya, int ballBiologiya, String phone) {
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -37,7 +37,7 @@ public class Abiturient {
 
     }
 
- public Abiturient(String surname, String name, String patronimic, int ballFizika, int ballChimiya, int ballBiologiya) {
+    public Abiturient(String surname, String name, String patronimic, int ballFizika, int ballChimiya, int ballBiologiya) {
         this.surname = surname;
         this.name = name;
         this.patronimic = patronimic;
@@ -46,7 +46,7 @@ public class Abiturient {
         this.ballBiologiya = ballBiologiya;
     }
 
-public Abiturient(int ballFizika, int ballChimiya, int ballBiologiya) {
+    public Abiturient(int ballFizika, int ballChimiya, int ballBiologiya) {
         this.ballFizika = ballFizika;
         this.ballChimiya = ballChimiya;
         this.ballBiologiya = ballBiologiya;
@@ -148,4 +148,3 @@ public Abiturient(int ballFizika, int ballChimiya, int ballBiologiya) {
 
     }
 }
-
