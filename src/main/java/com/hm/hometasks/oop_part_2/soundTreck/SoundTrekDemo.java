@@ -9,7 +9,6 @@
  */
 package com.hm.hometasks.oop_part_2.soundTreck;
 
-
 import java.util.Scanner;
 
 /**
@@ -17,19 +16,21 @@ import java.util.Scanner;
  * @author OsinVladimir
  */
 public class SoundTrekDemo {
-      public void  SoundTrekInit(){
+
+    public void SoundTrekInit() {
         Installation installation = createInstallation();
-        System.out.println("Продолжительность диска  " + " " +installation.getDuration() + " "+"минут");
+        System.out.println("Продолжительность диска  " + " " + installation.getDuration() + " " + "минут");
         consolIO(installation);
-       
-     }
-     public static Installation createInstallation(){
-         
-        Composition instrument  = new InstrumentComposition(12,1,10);
-        Composition pop  = new PopComposition(5,2,12);
-        Composition classic  = new ClassicComposition(11,3,10);
-        Composition instrument1 = new InstrumentComposition(8,4,3);
-        Composition pop1 = new PopComposition(7,2,4);
+
+    }
+
+    public static Installation createInstallation() {
+
+        Composition instrument = new InstrumentComposition(12, 1, 10);
+        Composition pop = new PopComposition(5, 2, 12);
+        Composition classic = new ClassicComposition(11, 3, 10);
+        Composition instrument1 = new InstrumentComposition(8, 4, 3);
+        Composition pop1 = new PopComposition(7, 2, 4);
 
         Installation inst = new Installation();
         inst.addComposition(instrument);
@@ -37,9 +38,10 @@ public class SoundTrekDemo {
         inst.addComposition(classic);
         inst.addComposition(instrument1);
         inst.addComposition(pop1);
-        return inst ;
-     }
-     public static void consolIO(Installation installation){
+        return inst;
+    }
+
+    public static void consolIO(Installation installation) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -54,11 +56,7 @@ public class SoundTrekDemo {
                     }
                     break;
                     case 2: {
-                        System.out.println("Введите начальный диапазон длины трека. ");
-                        int r1 = Integer.parseInt(sc.next());
-                        System.out.println("Введите конечный длины трека. ");
-                        int r2 = Integer.parseInt(sc.next());
-                        installation.findComposition(r1, r2);
+                        findComposition(sc, installation);
                     }
                     break;
                     default: {
@@ -70,19 +68,21 @@ public class SoundTrekDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
         }
-   
-     }
+
+    }
+
+    public static void findComposition(Scanner sc, Installation installation) {
+        System.out.println("Введите начальный диапазон длины трека. ");
+        int r1 = Integer.parseInt(sc.next());
+        System.out.println("Введите конечный длины трека. ");
+        int r2 = Integer.parseInt(sc.next());
+        installation.findComposition(r1, r2);
+    }
 
 }
-
-
-
-
-
-

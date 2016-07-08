@@ -10,23 +10,23 @@
  */
 package com.hm.hometasks.oop_part_2.newYearPresent;
 
-
 import java.util.Scanner;
 
 /**
  *
- * @author vplpdka
+ * @author Osin Vladimir
  */
 public class NewYearPresentDemo {
 
-    public void  NewYearPresentInit(){
+    public void NewYearPresentInit() {
         NewYearPresent newYearPresent = createNewYearPresent();
         System.out.println("Вес подарка " + " " + newYearPresent.getWeight() + " грамм");
         consolIO(newYearPresent);
-     
+
     }
-    public static NewYearPresent createNewYearPresent(){
-      
+
+    public static NewYearPresent createNewYearPresent() {
+
         Candy chocolate = new ChocolatCandy("Ласточка", 125.25, 15, 12);
         Candy lollipop = new LollipopCandy("Бум Бум", 25.05, 10, 5);
         Candy caramel = new CaramelCandy("Рачки", 78.15, 8, 3);
@@ -39,10 +39,11 @@ public class NewYearPresentDemo {
         newYearPresent.addCandy(lollipop);
         newYearPresent.addCandy(caramel);
         newYearPresent.addCandy(chocolate2);
-        newYearPresent.addCandy(caramel2);   
+        newYearPresent.addCandy(caramel2);
         return newYearPresent;
     }
-    public static void consolIO(NewYearPresent newYearPresent){
+
+    public static void consolIO(NewYearPresent newYearPresent) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -56,11 +57,7 @@ public class NewYearPresentDemo {
                     }
                     break;
                     case 2: {
-                        System.out.println("Введите начальный диапазон содержания сахара. ");
-                        int r1 = Integer.parseInt(sc.next());
-                        System.out.println("Введите конечный диапазон содержания сахара. ");
-                        int r2 = Integer.parseInt(sc.next());
-                        newYearPresent.findCandy(r1, r2);
+                        findCandy(sc, newYearPresent);
                     }
                     break;
                     default: {
@@ -72,19 +69,20 @@ public class NewYearPresentDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        } 
+        }
+    }
+
+    public static void findCandy(Scanner sc, NewYearPresent newYearPresent) {
+        System.out.println("Введите начальный диапазон содержания сахара. ");
+        int r1 = Integer.parseInt(sc.next());
+        System.out.println("Введите конечный диапазон содержания сахара. ");
+        int r2 = Integer.parseInt(sc.next());
+        newYearPresent.findCandy(r1, r2);
     }
 
 }
-
-
-
-
-
-
-

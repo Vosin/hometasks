@@ -12,17 +12,17 @@ public class HomeDevice {
 
     private String name;//название
     private double power;//мощность
-    private boolean state;//флаг включен выключен
+    private boolean switched = false;;//флаг включен/ выключен
     private int voltage;//напряжение
 
     //конструкторы
  public HomeDevice() {
     }
 
-public HomeDevice(String name, double power, boolean state, int voltage) {
+public HomeDevice(String name, double power, boolean switched, int voltage) {
         this.name = name;
         this.power = power;
-        this.state = state;
+        this.switched = switched;
         this.voltage = voltage;
     }
 
@@ -49,12 +49,12 @@ public HomeDevice(String name, double power) {
         return power;
     }
 
-    public void setState(boolean state) {
-        this.state = state;
+    public void setSwitched(boolean switched) {
+        this.switched = switched;
     }
 
-    public boolean getState() {
-        return state;
+    public boolean getSwitched() {
+        return switched;
     }
 
     public void setVoltage(int voltage) {
@@ -67,8 +67,15 @@ public HomeDevice(String name, double power) {
 
     @Override
     public String toString() {
-        return "Электроприбор:" + " " + name + " " + "Мощностью =" + power + " " + "Состояние = " + " "
-                + state + " " + "Используемое напряжение сети =" + voltage;
+        return "Электроприбор:" + " " + name + " " + "Мощностью =" + power + " "+ 
+                 " " + "Используемое напряжение сети =" + voltage;
+    }
+    public void switchOn(){
+        this.switched = true;
+    }
+ 
+    public void switchOff(){
+        this.switched = false;
     }
 
 }

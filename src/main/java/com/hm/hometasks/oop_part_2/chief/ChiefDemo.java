@@ -14,18 +14,20 @@ import java.util.Scanner;
  * @author OsinVladimir
  */
 public class ChiefDemo {
-     public  void ChiefInit(){
+
+    public void ChiefInit() {
         Salad salad = createSalad();
-        System.out.println("Калорийность салата  " + " " + salad.getСaloricValue() + " "+"кКл");
+        System.out.println("Калорийность салата  " + " " + salad.getСaloricValue() + " " + "кКл");
         consolIO(salad);
-        
-     }
-     public static Salad createSalad(){
-        Vegetable cabbage  = new CabbageVegetable(2.25,3.20,4.55,5.25);
-        Vegetable carrot = new CarrotVegetable(3.25,4.80,5.55,8.25);
-        Vegetable tomato  = new TomatoVegetable(7.25,1.20,1.55,3.25);
-        Vegetable tomato1 = new TomatoVegetable(5.25,2.30,2.44,4.44);
-        Vegetable carrot1 = new CarrotVegetable(1.25,3.10,3.50,1.25);
+
+    }
+
+    public static Salad createSalad() {
+        Vegetable cabbage = new CabbageVegetable(2.25, 3.20, 4.55, 5.25);
+        Vegetable carrot = new CarrotVegetable(3.25, 4.80, 5.55, 8.25);
+        Vegetable tomato = new TomatoVegetable(7.25, 1.20, 1.55, 3.25);
+        Vegetable tomato1 = new TomatoVegetable(5.25, 2.30, 2.44, 4.44);
+        Vegetable carrot1 = new CarrotVegetable(1.25, 3.10, 3.50, 1.25);
 
         Salad salad = new Salad();
         salad.addVegetable(cabbage);
@@ -34,8 +36,9 @@ public class ChiefDemo {
         salad.addVegetable(tomato1);
         salad.addVegetable(carrot1);
         return salad;
-     }
-     public static void consolIO(Salad salad){
+    }
+
+    public static void consolIO(Salad salad) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -49,11 +52,7 @@ public class ChiefDemo {
                     }
                     break;
                     case 2: {
-                        System.out.println("Введите начальный диапазон калорийности. ");
-                        double r1 = Double.parseDouble(sc.next());
-                        System.out.println("Введите конечный диапазон калорийности. ");
-                        double r2 = Double.parseDouble(sc.next());
-                        salad.findVegetable(r1, r2);
+                        findVegetableDiapazon(sc, salad);
                     }
                     break;
                     default: {
@@ -65,22 +64,19 @@ public class ChiefDemo {
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }  
-     }
+        }
     }
 
-
-
-
-
-
-
-
-
-
-
+    public static void findVegetableDiapazon(Scanner sc, Salad salad) {
+        System.out.println("Введите начальный диапазон калорийности. ");
+        double r1 = Double.parseDouble(sc.next());
+        System.out.println("Введите конечный диапазон калорийности. ");
+        double r2 = Double.parseDouble(sc.next());
+        salad.findVegetable(r1, r2);
+    }
+}

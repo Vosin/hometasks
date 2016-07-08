@@ -19,4 +19,14 @@ public class KettleHomeDevice extends HomeDevice {
     public String toString() {
         return super.toString();
     }
+   @Override
+    public void switchOn(){
+        super.switchOn();
+        System.out.println(this+" включен в розетку!");
+    }
+    @Override
+    public void switchOff(){
+        super.switchOff();
+        System.out.println(this+" выключен из розетки!");
+    }
 }

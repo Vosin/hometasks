@@ -18,19 +18,21 @@ import java.util.Scanner;
  * @author Osin Vladimir
  */
 public class CoffeeVanDemo {
-      public void CoffeeVanInit() {
-      CoffeeVan coffeeVan = createCoffeeVan();
-      System.out.println("Общий Вес фургона равен = "+coffeeVan.getWeight());
-      consolIO(coffeeVan);
-        
-     }
-      public static CoffeeVan createCoffeeVan(){
-        Coffee  pauling =  new PaulingCoffee("Арабика","молотый",100,120.25,"Высший",2);
-        Coffee  blaser  =  new BlaserCoffee("Робуста","в зернах",200,320.25,"Высший",3);
-        Coffee  mokko   =  new MokkoCoffee("Арабика","растворимый",100,120.25,"Высший",2);
-        Coffee  blaser1  =  new BlaserCoffee("Робуста","в пакетах",300,55.75,"Первый",4);
-        Coffee  mokko1   =  new MokkoCoffee("Арабика","молотый",500,88.00,"Второй",1);
-         
+
+    public void CoffeeVanInit() {
+        CoffeeVan coffeeVan = createCoffeeVan();
+        System.out.println("Общий Вес фургона равен = " + coffeeVan.getWeight());
+        consolIO(coffeeVan);
+
+    }
+
+    public static CoffeeVan createCoffeeVan() {
+        Coffee pauling = new PaulingCoffee("Арабика", "молотый", 100, 120.25, "Высший", 2);
+        Coffee blaser = new BlaserCoffee("Робуста", "в зернах", 200, 320.25, "Высший", 3);
+        Coffee mokko = new MokkoCoffee("Арабика", "растворимый", 100, 120.25, "Высший", 2);
+        Coffee blaser1 = new BlaserCoffee("Робуста", "в пакетах", 300, 55.75, "Первый", 4);
+        Coffee mokko1 = new MokkoCoffee("Арабика", "молотый", 500, 88.00, "Второй", 1);
+
         //создаем фургон
         CoffeeVan сoffeeVan = new CoffeeVan();
         сoffeeVan.addCoffee(pauling);
@@ -38,10 +40,11 @@ public class CoffeeVanDemo {
         сoffeeVan.addCoffee(mokko);
         сoffeeVan.addCoffee(blaser1);
         сoffeeVan.addCoffee(blaser1);
-        
-        return сoffeeVan ;
-      }
-      public static void consolIO(CoffeeVan coffeeVan){
+
+        return сoffeeVan;
+    }
+
+    public static void consolIO(CoffeeVan coffeeVan) {
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
@@ -66,14 +69,15 @@ public class CoffeeVanDemo {
                 }
             } catch (Exception e) {
                 end = true;
-            }System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
+            }
+            System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }   
-      }
+        }
+    }
 
 }

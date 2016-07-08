@@ -55,11 +55,7 @@ public class InsuranceLiabilitiesDemo {
                     }
                     break;
                     case 2: {
-                        System.out.println("Введите начальный диапазон суммы. ");
-                        int r1 = Integer.parseInt(sc.next());
-                        System.out.println("Введите конечный диапазон суммы. ");
-                        int r2 = Integer.parseInt(sc.next());
-                        contract.findСommitment(r1, r2);
+                        findСommitmentDiapazon(contract, sc);
                     }
                     break;
                     default: {
@@ -77,5 +73,13 @@ public class InsuranceLiabilitiesDemo {
                 end = true;
             }
         }
+    }
+
+    public static void findСommitmentDiapazon(Contract contract, Scanner sc) {
+        System.out.println("Введите начальный диапазон суммы. ");
+        int r1 = Integer.parseInt(sc.next());
+        System.out.println("Введите конечный диапазон суммы. ");
+        int r2 = Integer.parseInt(sc.next());
+        contract.findСommitment(r1, r2);
     }
 }

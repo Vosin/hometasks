@@ -9,7 +9,6 @@
  */
 package com.hm.hometasks.oop_part_2.flower;
 
-
 import java.util.Scanner;
 
 /**
@@ -18,13 +17,13 @@ import java.util.Scanner;
  */
 public class FlowerShop {
 
-    public void FlowerShopInit(){
-      Bouquet bouquet = createBuquet();
-      consolIO(bouquet);  
+    public void FlowerShopInit() {
+        Bouquet bouquet = createBuquet();
+        consolIO(bouquet);
     }
-    
-    public static Bouquet createBuquet(){
-       
+
+    public static Bouquet createBuquet() {
+
         Flower ros = new RoseFlower(40.55, 1, 15);
         Flower tup = new TulipFlower(20.00, 2, 50);
         Flower carn = new CarnationFlower(10.25, 3, 50);
@@ -42,9 +41,10 @@ public class FlowerShop {
         //добавляем аксесуары
         bouquet.setAccessories("Пленка прозрачная");
         bouquet.setPriceAccessories(10.5);
-return  bouquet;
-}
-    public static void consolIO(Bouquet bouquet){
+        return bouquet;
+    }
+
+    public static void consolIO(Bouquet bouquet) {
         double totalPrice;
         totalPrice = bouquet.getPrice() + bouquet.getPriceAccessories();
 
@@ -65,11 +65,7 @@ return  bouquet;
                     }
                     break;
                     case 2: {
-                        System.out.println("Введите начальный диапазон длины стебля. ");
-                        int r1 = Integer.parseInt(sc.next());
-                        System.out.println("Введите конечный диапазон длины стебля. ");
-                        int r2 = Integer.parseInt(sc.next());
-                        bouquet.findFlower(r1, r2);
+                        findFlower(sc, bouquet);
                     }
                     break;
                     default: {
@@ -81,12 +77,19 @@ return  bouquet;
             }
             System.out.println("Желаете продолжить: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
-            if(contunue==1){
+            if (contunue == 1) {
                 end = false;
-            }else{
+            } else {
                 end = true;
             }
-        }   
+        }
+    }
+
+    public static void findFlower(Scanner sc, Bouquet bouquet) {
+        System.out.println("Введите начальный диапазон длины стебля. ");
+        int r1 = Integer.parseInt(sc.next());
+        System.out.println("Введите конечный диапазон длины стебля. ");
+        int r2 = Integer.parseInt(sc.next());
+        bouquet.findFlower(r1, r2);
     }
 }
-

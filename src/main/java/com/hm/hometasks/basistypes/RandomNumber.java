@@ -15,10 +15,19 @@ public class RandomNumber {
 
     public static void main(String[] args) {
         Random random = new Random();
-        printRandomNumber(random.nextInt(99));
+        int i = random.nextInt(99);
+        if (i <= 25) {
+            printRandomNumberTwenty_Five(i);
+        } else if ((i > 25) & (i <= 50)) {
+            printRandomNumber_Fifty(i);
+        } else if ((i > 50) & (i <= 75)) {
+            printRundomSeventy_Five(i);
+        } else if ((i > 75) & (i <= 99)) {
+            printRandomNumberNinety_Nine(i);
+        }
     }
 
-public static void printRandomNumber(int i) {
+    public static void printRandomNumberTwenty_Five(int i) {
         int number = 0;
         switch (i) {
             case 0:
@@ -99,6 +108,16 @@ public static void printRandomNumber(int i) {
             case 25:
                 number = i;
                 break;
+            default:
+                number = 0;
+                break;
+        }
+        System.out.println("Случайное число = " + " " + number);
+    }
+
+    public static void printRandomNumber_Fifty(int i) {
+        int number = 0;
+        switch (i) {
             case 26:
                 number = i;
                 break;
@@ -174,6 +193,16 @@ public static void printRandomNumber(int i) {
             case 50:
                 number = i;
                 break;
+            default:
+                number = 0;
+                break;
+        }
+        System.out.println("Случайное число = " + " " + number);
+    }
+
+    public static void printRundomSeventy_Five(int i) {
+        int number = 0;
+        switch (i) {
             case 51:
                 number = i;
                 break;
@@ -249,6 +278,16 @@ public static void printRandomNumber(int i) {
             case 75:
                 number = i;
                 break;
+            default:
+                number = 0;
+                break;
+        }
+        System.out.println("Случайное число = " + " " + number);
+    }
+
+    public static void printRandomNumberNinety_Nine(int i) {
+        int number = 0;
+        switch (i) {
             case 76:
                 number = i;
                 break;
@@ -327,6 +366,7 @@ public static void printRandomNumber(int i) {
 
         }
         System.out.println("Случайное число = " + " " + number);
+
     }
 
 }

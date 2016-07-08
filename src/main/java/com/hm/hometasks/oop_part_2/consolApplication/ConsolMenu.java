@@ -55,8 +55,15 @@ public class ConsolMenu {
             System.out.println("17-TourPackages ");
             System.out.println("18-Credits ");
        try {
-                int result = Integer.parseInt(sc.next());
-                switch (result) {
+              int result = Integer.parseInt(sc.next());
+              selectInit(result);
+              }catch (Exception e) {
+                end = true;
+            }
+        }    end = true;
+        }
+    public static void selectInit(int result){
+         switch (result) {
                     case 1: {
                         FlowerShop flowerShop = new FlowerShop();
                         flowerShop.FlowerShopInit();
@@ -128,17 +135,11 @@ public class ConsolMenu {
                     case 18: {
                       CreditDemo creditDemo = new CreditDemo();
                       creditDemo.CreditInit();
-                        
                     }  break;
-                    
                     default: {
-                        end = true;
+                       System.out.println("Enter right number ");
                     }
                 }
-              }catch (Exception e) {
-                end = true;
-            }
-
-}end = true;
-        }
+             
+    }
     }
