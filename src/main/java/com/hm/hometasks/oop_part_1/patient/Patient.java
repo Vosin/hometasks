@@ -47,65 +47,32 @@ public class Patient {
     }
 //определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setSurName(String surname) {
-        this.surname = surname;
     }
 
     public String getSurName() {
         return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
-
     }
 
     public String getPatronimic() {
         return patronimic;
     }
 
-    public void setMedicinCard(int medicinCard) {
-        this.medicinCard = medicinCard;
-    }
-
     public int getMedicinCard() {
         return medicinCard;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
     }
 
     public String getAdress() {
         return adress;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setDiagnoz(String diagnoz) {
-        this.diagnoz = diagnoz;
     }
 
     public String getDiagnoz() {

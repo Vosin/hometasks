@@ -54,73 +54,36 @@ public class Abiturient {
     }
 //определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setSurName(String surname) {
-        this.surname = surname;
     }
 
     public String getSurName() {
         return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
-
     }
 
     public String getPatronimic() {
         return patronimic;
     }
 
-    public void setBallFizika(int ballFizika) {
-        this.ballFizika = ballFizika;
-    }
-
     public int getBallFizika() {
         return ballFizika;
-    }
-
-    public void setBallChimiya(int ballChimiya) {
-        this.ballChimiya = ballChimiya;
     }
 
     public int getBallChimiya() {
         return ballChimiya;
     }
 
-    public void setBallBiologiya(int ballBiologiya) {
-        this.ballBiologiya = ballBiologiya;
-    }
-
     public int getBallBiologiya() {
         return ballBiologiya;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
     public String getAdress() {
         return adress;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getPhone() {

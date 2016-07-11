@@ -44,50 +44,23 @@ public class Bus {
     }
 
 //определяем геттеры и сеттеры
-    public void setSurName(String surname) {
-        this.surname = surname;
-    }
+
 
     public String getSurName() {
         return surname;
     }
-
-    public void setNumberBus(int numberBus) {
-        this.numberBus = numberBus;
-    }
-
     public int getNumberBus() {
         return numberBus;
     }
-
-    public void setNumberMarshruta(int numberMarshruta) {
-        this.numberMarshruta = numberMarshruta;
-    }
-
     public int getNumberMarshruta() {
         return numberMarshruta;
     }
-
-    public void setMarka(String marka) {
-        this.marka = marka;
-    }
-
     public String getMarka() {
         return marka;
     }
-
-    public void setGodStartEkspluatatsii(int godStartEkspluatatsii) {
-        this.godStartEkspluatatsii = godStartEkspluatatsii;
-    }
-
     public int getGodStartEkspluatatsii() {
         return godStartEkspluatatsii;
     }
-
-    public void setProbeg(int probeg) {
-        this.probeg = probeg;
-    }
-
     public int getProbeg() {
         return probeg;
     }

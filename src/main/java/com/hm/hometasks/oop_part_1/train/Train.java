@@ -44,56 +44,28 @@ public class Train {
     }
 
 //определяем геттеры и сеттеры
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
     public String getDestination() {
         return destination;
-    }
-
-    public void setNumberTrain(int numberTrain) {
-        this.numberTrain = numberTrain;
     }
 
     public int getNumberTrain() {
         return numberTrain;
     }
 
-    public void setTimeDeparture(double timeDeparture) {
-        this.timeDeparture = timeDeparture;
-    }
-
     public double getTimeDeparture() {
         return timeDeparture;
-    }
-
-    public void setNumberSeatsOveral(int numberSeatsOveral) {
-        this.numberSeatsOveral = numberSeatsOveral;
     }
 
     public int getNumberSeatsOveral() {
         return numberSeatsOveral;
     }
 
-    public void setNumberSeatsKupe(int numberSeatsKupe) {
-        this.numberSeatsKupe = numberSeatsKupe;
-    }
-
     public int getNumberSeatsKupe() {
         return numberSeatsKupe;
     }
 
-    public void setNumberSeatsPlatskart(int numberSeatsPlatskart) {
-        this.numberSeatsPlatskart = numberSeatsPlatskart;
-    }
-
     public int getNumberSeatsPlatskart() {
         return numberSeatsPlatskart;
-    }
-
-    public void setNumberSeatsLuxury(int numberSeatsLuxury) {
-        this.numberSeatsLuxury = numberSeatsLuxury;
     }
 
     public int getNumberSeatsLuxury() {

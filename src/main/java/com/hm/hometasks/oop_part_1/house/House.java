@@ -52,64 +52,32 @@ public class House {
     }
 //определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setNumberFlat(int numberFlat) {
-        this.numberFlat = numberFlat;
     }
 
     public int getNumberFlat() {
         return numberFlat;
     }
 
-    public void setSquare(int square) {
-        this.square = square;
-    }
-
     public int getSquare() {
         return square;
-    }
-
-    public void setFloor(int floor) {
-        this.floor = floor;
     }
 
     public int getFloor() {
         return floor;
     }
 
-    public void setCountRoom(int countRoom) {
-        this.countRoom = countRoom;
-    }
-
     public int getCountRoom() {
         return countRoom;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public void setTypeBild(String typeBild) {
-        this.typeBild = typeBild;
-    }
-
     public String getTypeBild() {
         return typeBild;
-    }
-
-    public void setTermEkspluatatii(int termEkspluatatii) {
-        this.termEkspluatatii = termEkspluatatii;
     }
 
     public int getTermEkspluatatii() {

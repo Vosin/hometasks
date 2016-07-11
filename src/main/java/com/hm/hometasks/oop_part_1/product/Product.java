@@ -48,56 +48,28 @@ public class Product {
     }
 
 //определяем геттеры и сеттеры
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setUpc(int upc) {
-        this.upc = upc;
-    }
-
     public int getUpc() {
         return upc;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
     }
 
     public String getCompany() {
         return company;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public double getPrice() {
         return price;
     }
 
-    public void setTimeStorage(int timeStorage) {
-        this.timeStorage = timeStorage;
-    }
-
     public int getTimeStorage() {
         return timeStorage;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public int getCount() {

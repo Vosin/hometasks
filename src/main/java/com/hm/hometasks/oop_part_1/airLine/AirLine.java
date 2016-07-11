@@ -42,40 +42,20 @@ public class AirLine {
     }
 
 //определяем геттеры и сеттеры
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
+ 
 
     public String getDestination() {
         return destination;
     }
 
-    public void setNumberReys(int numberReys) {
-        this.numberReys = numberReys;
-    }
-
     public int getNumberReys() {
         return numberReys;
     }
-
-    public void setTypeAir(String typeAir) {
-        this.typeAir = typeAir;
-    }
-
     public String getTypeAir() {
         return typeAir;
     }
-
-    public void setTimeDeparture(double timeDeparture) {
-        this.timeDeparture = timeDeparture;
-    }
-
     public double getTimeDeparture() {
         return timeDeparture;
-    }
-
-    public void setDays(String days) {
-        this.days = days;
     }
 
     public String getDays() {

@@ -52,64 +52,32 @@ public class Book {
     }
 
 //определяем геттеры и сеттеры
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     public String getAutor() {
         return autor;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setIzdatelstvo(String izdatelstvo) {
-        this.izdatelstvo = izdatelstvo;
     }
 
     public String getIzdatelstvo() {
         return izdatelstvo;
     }
 
-    public void setGodIzdania(int godIzdania) {
-        this.godIzdania = godIzdania;
-    }
-
     public int getGodIzdania() {
         return godIzdania;
-    }
-
-    public void setCountPage(int countPage) {
-        this.countPage = countPage;
     }
 
     public int getCountPage() {
         return countPage;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getType() {

@@ -46,57 +46,28 @@ public class Customer implements Comparable {
     }
 ///определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setSurName(String surname) {
-        this.surname = surname;
     }
 
     public String getSurName() {
         return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
-
     }
 
     public String getPatronimic() {
         return patronimic;
     }
 
-    public void setCreditCard(int creditCard) {
-        this.creditCard = creditCard;
-    }
-
     public int getCreditCard() {
         return creditCard;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
     public String getAdress() {
         return adress;
-    }
-
-    public void setBankAccount(int bankAccount) {
-        this.bankAccount = bankAccount;
     }
 
     public int getBankAccount() {

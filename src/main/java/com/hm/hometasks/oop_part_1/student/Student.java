@@ -56,82 +56,40 @@ public class Student implements Comparable {
     }
 //определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setSurnname(String surname) {
-        this.surname = surname;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
-
     }
 
     public String getPatronimic() {
         return patronimic;
     }
 
-    public void setBirthDay(int birthday) {
-        this.birthDay = birthday;
-    }
-
     public int getBirthDay() {
         return birthDay;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
     }
 
     public String getAdress() {
         return adress;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-
     }
 
     public String getDepartment() {
         return department;
     }
 
-    public void setCourse(int course) {
-        this.course = course;
-    }
-
     public int getCourse() {
         return course;
-    }
-
-    public void setGroup(int group) {
-        this.group = group;
     }
 
     public int getGroup() {

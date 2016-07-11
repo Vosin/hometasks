@@ -52,73 +52,36 @@ public class Phone implements Comparable {
     }
 ///определяем геттеры и сеттеры
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setSurName(String surname) {
-        this.surname = surname;
     }
 
     public String getSurName() {
         return surname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setPatronimic(String patronimic) {
-        this.patronimic = patronimic;
-
     }
 
     public String getPatronimic() {
         return patronimic;
     }
 
-    public void setCreditCard(int creditCard) {
-        this.creditCard = creditCard;
-    }
-
     public int getCreditCard() {
         return creditCard;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
     }
 
     public String getAdress() {
         return adress;
     }
 
-    public void setDebet(int debet) {
-        this.debet = debet;
-    }
-
     public int getDebet() {
         return debet;
     }
 
-    public void setKredit(int kredit) {
-        this.kredit = kredit;
-    }
-
     public int getKredit() {
         return kredit;
-    }
-
-    public void setTimeCity(int timeCity) {
-        this.timeCity = timeCity;
     }
 
     public int getTimeCity() {

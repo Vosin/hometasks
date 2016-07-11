@@ -48,56 +48,28 @@ public class Car {
     }
 
 //определяем геттеры и сеттеры
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setMarka(String marka) {
-        this.marka = marka;
     }
 
     public String getMarka() {
         return marka;
     }
 
-    public void setModel(int model) {
-        this.model = model;
-    }
-
     public int getModel() {
         return model;
-    }
-
-    public void setYearVypuska(int yearVypuska) {
-        this.yearVypuska = yearVypuska;
     }
 
     public int getYearVypuska() {
         return yearVypuska;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getColor() {
         return color;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setRegNumber(int regNumber) {
-        this.regNumber = regNumber;
     }
 
     public int getRegNumber() {
