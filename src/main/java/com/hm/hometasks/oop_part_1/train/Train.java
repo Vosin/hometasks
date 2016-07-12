@@ -74,10 +74,10 @@ public class Train {
 
     @Override
     public String toString() {
-        return "Поезд" + " " + "Пункт назначения=" + " " + destination + " " + "номер=" + numberTrain + " "
-                + "Время отправления=" + " " + timeDeparture + " " + "Количество общих мест =" + numberSeatsOveral + " "
-                + "Количество мест купе=" + " " + numberSeatsKupe + " " + "Количество мест плацкарт:" + " "
-                + numberSeatsPlatskart + " Количество мест люкс=" + " " + numberSeatsLuxury;
+        return "Поезд" + " " + "Пункт назначения=" + " " + getDestination() + " " + "номер=" + getNumberTrain() + " "
+                + "Время отправления=" + " " + getTimeDeparture() + " " + "Количество общих мест =" + getNumberSeatsOveral() + " "
+                + "Количество мест купе=" + " " + getNumberSeatsKupe() + " " + "Количество мест плацкарт:" + " "
+                + getNumberSeatsPlatskart() + " Количество мест люкс=" + " " + getNumberSeatsLuxury();
     }
 
 }

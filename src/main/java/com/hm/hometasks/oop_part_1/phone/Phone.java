@@ -98,9 +98,10 @@ public class Phone implements Comparable {
 
     @Override
     public String toString() {
-        return "Абонент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " " + "Дебет=" + " " + debet + " " + "Кредит = " + " "
-                + kredit + " " + "Время городских переговоров = " + " " + timeCity + " " + "Время междугородних преговоров= " + " " + timeBetweenCity;
+        return "Абонент" + " " + "id =" + " " + getId() + " " + "Фамилия=" + getSurName() + " " + "Имя=" + " " + getName() + " "
+                + "Отчеcтво=" + getPatronimic() + " " + "Адрес=" + " " + getAdress() + " " + "Номер кредитки=" + " "
+                + getCreditCard() + " " + "Дебет=" + " " + getDebet() + " " + "Кредит = " + " "+ getKredit() + " "
+                + "Время городских переговоров = " + " " + getTimeCity() + " " + "Время междугородних преговоров= " + " " + getTimeBetweenCity();
     }
 
     @Override

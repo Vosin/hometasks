@@ -86,8 +86,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Книга" + " " + "id =" + " " + id + " " + "Автор=" + autor + " " + "Название=" + " " + name + " " + "Издательство =" + izdatelstvo + " "
-                + "Год издания=" + " " + godIzdania + " " + "Количество страниц:" + " " + countPage + " цена=" + " "
-                + price + ": " + "Тип переплета=" + " " + type;
+        return "Книга" + " " + "id =" + " " + getId() + " " + "Автор=" + getAutor() + " " + "Название=" + " " + getName()+ " "
+                + "Издательство =" + getIzdatelstvo() + " " + "Год издания=" + " " + getGodIzdania() + " " + "Количество страниц:" + " " 
+                + getCountPage() + " цена=" + " " + getPrice() + ": " + "Тип переплета=" + " " + getType();
     }
 }

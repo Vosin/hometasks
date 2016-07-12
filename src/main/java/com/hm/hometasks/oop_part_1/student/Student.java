@@ -98,9 +98,9 @@ public class Student implements Comparable {
 
     @Override
     public String toString() {
-        return "Студент" + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "ДеньРождения" + " " + birthDay + " " + "Адрес=" + " " + adress + " " + "Телефон=" + " " + phone + " "
-                + "Факультет=" + " " + department + " " + "Курс=" + " " + course + " " + "Группа=" + " " + group;
+        return "Студент" + " " + "Фамилия=" + getSurname() + " " + "Имя=" + " " + getName() + " " + "Отчеcтво=" + getPatronimic() + " "
+                + "ДеньРождения" + " " + getBirthDay() + " " + "Адрес=" + " " + getAdress() + " " + "Телефон=" + " " + getPhone() + " "
+                + "Факультет=" + " " + getDepartment() + " " + "Курс=" + " " + getCourse() + " " + "Группа=" + " " + getGroup();
     }
 
     @Override

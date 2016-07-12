@@ -86,8 +86,8 @@ public class House {
 
     @Override
     public String toString() {
-        return "Дом" + " " + "id =" + " " + id + " " + "Номер квартиры=" + numberFlat + " " + "Площадь=" + " "
-                + square + " " + "Этаж =" + floor + " " + "Количество комнат=" + " " + countRoom + " " + "Улица:" + " "
-                + street + " Тип здания=" + " " + typeBild + ": " + "Срок эксплуатации=" + " " + termEkspluatatii;
+        return "Дом" + " " + "id =" + " " + getId()+ " " + "Номер квартиры=" + getNumberFlat() + " " + "Площадь=" + " "
+                + getSquare() + " " + "Этаж =" + getFloor() + " " + "Количество комнат=" + " " + getCountRoom() + " " + "Улица:" + " "
+                + getStreet() + " Тип здания=" + " " + getTypeBild() + ": " + "Срок эксплуатации=" + " " + getTermEkspluatatii();
     }
 }

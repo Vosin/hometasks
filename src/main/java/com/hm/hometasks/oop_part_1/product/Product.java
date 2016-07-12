@@ -78,9 +78,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Продукт" + " " + "id =" + " " + id + " " + "Наименование=" + name + " " + "UPC=" + " "
-                + upc + " " + "Производитель =" + company + " " + "Цена=" + " " + price + " " + "СрокХранения:" + " "
-                + timeStorage + " Количество=" + " " + count;
+        return "Продукт" + " " + "id =" + " " + getId()+ " " + "Наименование=" + getName() + " " + "UPC=" + " "
+                + getUpc() + " " + "Производитель =" + getCompany() + " " + "Цена=" + " " + getPrice() + " " + "СрокХранения:" + " "
+                + getTimeStorage() + " Количество=" + " " + getCount();
     }
 
 }

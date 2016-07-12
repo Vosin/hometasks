@@ -81,8 +81,8 @@ public class Patient {
 
     @Override
     public String toString() {
-        return "Пациент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " "
-                + name + " " + "Отчеcтво=" + patronimic + " " + "Адрес=" + " " + adress + " " + "Телефон:" + " "
-                + phone + "Номер медицинской карты=" + " " + medicinCard + " " + "Диагноз=" + " " + diagnoz;
+        return "Пациент" + " " + "id =" + " " + getId() + " " + "Фамилия=" + getSurName() + " " + "Имя=" + " "
+                + getName() + " " + "Отчеcтво=" +getPatronimic() + " " + "Адрес=" + " " + getAdress() + " " + "Телефон:" + " "
+                + getPhone() + "Номер медицинской карты=" + " " + getMedicinCard() + " " + "Диагноз=" + " " + getDiagnoz();
     }
 }

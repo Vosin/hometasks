@@ -92,9 +92,9 @@ public class Abiturient {
 
     @Override
     public String toString() {
-        return "Абитурьент" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " " + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Телефон:" + " " + phone + " Оценка по физике=" + " "
-                + ballFizika + ": " + "Оценка по химии=" + " " + ballChimiya + ": " + "Оценка по биологии =" + " " + ballBiologiya;
+        return "Абитурьент" + " " + "id =" + " " + getId() + " " + "Фамилия=" + getSurName() + " " + "Имя=" + " " + getName() + " " + "Отчеcтво=" + getPatronimic() + " "
+                + "Адрес=" + " " + getAdress() + " " + "Телефон:" + " " + getPhone() + " Оценка по физике=" + " "
+                + getBallFizika() + ": " + "Оценка по химии=" + " " + getBallChimiya() + ": " + "Оценка по биологии =" + " " + getBallBiologiya();
     }
 
     public int sumAllBall() {

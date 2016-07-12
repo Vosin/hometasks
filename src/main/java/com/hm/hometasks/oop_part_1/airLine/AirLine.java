@@ -64,9 +64,9 @@ public class AirLine {
 
     @Override
     public String toString() {
-        return "Лайнер" + " " + "Пункт назначения=" + " " + destination + " " + "номер рейса=" + numberReys + " "
-                + "тип самолета=" + " " + typeAir + " " + "Время вылета =" + timeDeparture + " "
-                + "День недели=" + " " + days;
+        return "Лайнер" + " " + "Пункт назначения=" + " " + getDestination() + " " + "номер рейса=" + getNumberReys() + " "
+                + "тип самолета=" + " " + getTypeAir() + " " + "Время вылета =" + getTimeDeparture() + " "
+                + "День недели=" + " " + getDays();
     }
 
 }

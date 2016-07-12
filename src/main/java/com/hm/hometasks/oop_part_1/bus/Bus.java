@@ -67,9 +67,9 @@ public class Bus {
 
     @Override
     public String toString() {
-        return "Автобус" + " " + "Водитель=" + " " + surname + " " + "номер=" + numberBus + " " + "номер маршрута=" + " "
-                + numberMarshruta + " " + "Марка =" + marka + " "
-                + "Год старта эксплуатации=" + " " + godStartEkspluatatsii + " " + "Пробег:" + " " + probeg;
+        return "Автобус" + " " + "Водитель=" + " " + getSurName() + " " + "номер=" +getNumberBus() + " " + "номер маршрута=" + " "
+                + getNumberMarshruta() + " " + "Марка =" + getMarka() + " " + "Год старта эксплуатации=" + " " + getGodStartEkspluatatsii() + " "
+                + "Пробег:" + " " + getProbeg();
     }
 
     public int SrokEkspluatasii() {

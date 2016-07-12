@@ -78,10 +78,9 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Автомобиль" + " " + "id =" + " " + id + " " + "Марка=" + marka + " " + "Модель=" + " "
-                + model + " " + "Год выпуска =" + yearVypuska + " "
-                + "Цвет=" + " " + color + " " + "Цена:" + " " + price + " Регистрационный номер=" + " "
-                + regNumber;
+        return "Автомобиль" + " " + "id =" + " " + getId() + " " + "Марка=" + getMarka() + " " + "Модель=" + " "
+                + getModel() + " " + "Год выпуска =" + getYearVypuska() + " " + "Цвет=" + " " + getColor()+ " "
+                + "Цена:" + " " + getPrice() + " Регистрационный номер=" + " " + getRegNumber();
     }
 
     public int countYearEkspl() {

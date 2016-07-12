@@ -76,10 +76,10 @@ public class Customer implements Comparable {
 
     @Override
     public String toString() {
-        return "Покупатель" + " " + "id =" + " " + id + " " + "Фамилия=" + surname + " "
-                + "Имя=" + " " + name + " " + "Отчеcтво=" + patronimic + " "
-                + "Адрес=" + " " + adress + " " + "Номер кредитки=" + " " + creditCard + " "
-                + "Банковский счет=" + " " + bankAccount;
+        return "Покупатель" + " " + "id =" + " " + getId() + " " + "Фамилия=" + getSurName() + " "
+                + "Имя=" + " " + getName() + " " + "Отчеcтво=" + getPatronimic() + " "
+                + "Адрес=" + " " + getAdress() + " " + "Номер кредитки=" + " " + getCreditCard() + " "
+                + "Банковский счет=" + " " +getBankAccount();
     }
 
     @Override
