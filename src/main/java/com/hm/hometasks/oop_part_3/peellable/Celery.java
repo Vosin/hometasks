@@ -18,5 +18,9 @@ public class Celery extends Vegetable {
     public String toString() {
         return super.toString();
     }
+    @Override
+     public void peell(){
+         super.peell();
+    }
 }
 

@@ -18,4 +18,8 @@ public class Potatoes extends Vegetable {
     public String toString() {
         return super.toString();
     }
+    @Override
+     public void peell(){
+         super.peell();
+    }
 }

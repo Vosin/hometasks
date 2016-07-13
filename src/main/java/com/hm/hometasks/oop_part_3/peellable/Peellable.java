@@ -7,7 +7,7 @@ package com.hm.hometasks.oop_part_3.peellable;
  *
  * @author Osin Vladimir
  */
-interface Peellable {
+public interface Peellable {
     void peell();
 
 }

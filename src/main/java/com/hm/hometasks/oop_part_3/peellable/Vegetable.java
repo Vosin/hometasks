@@ -1,7 +1,10 @@
 /*
  *Класс наследник Овощ
  */
+
+
 package com.hm.hometasks.oop_part_3.peellable;
+
 
 /**
  *
@@ -53,10 +56,11 @@ public class Vegetable extends Plant implements Peellable{
                 + "Цвет " + " " + getColor() + " " + "Зрелость=" + " " + getMaturity() + " "
                 + "Состояние " + " " + getCondition();
     } 
-    public void peell(){
-        setWeight(getWeight()-((getWeight()*5)/100));
-        setCleaning(true);
-        System.out.println(this+" очищен!");
+    @Override
+     public void peell(){
+     setWeight(getWeight()-((getWeight()*5)/100));
+     setCleaning(true);
+     System.out.println(this+" очищен!");
     }
    
 }

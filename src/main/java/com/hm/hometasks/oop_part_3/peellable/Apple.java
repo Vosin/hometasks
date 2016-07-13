@@ -18,6 +18,10 @@ public class Apple extends Fruit {
     public String toString() {
         return super.toString();
     }
+     @Override
+     public void peell(){
+         super.peell();
+     }
     
    
 }

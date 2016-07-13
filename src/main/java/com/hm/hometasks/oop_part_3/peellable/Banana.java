@@ -1,13 +1,14 @@
 /*
  * Класс банан наследник фрукт
  */
+
 package com.hm.hometasks.oop_part_3.peellable;
 
 /**
  *
  * @author Osin Vladimir
  */
-public class Banana extends Fruit implements Peellable{
+public class Banana extends Fruit {
       
     private final static String name = "Банан";
 
@@ -17,6 +18,10 @@ public class Banana extends Fruit implements Peellable{
   @Override
     public String toString() {
         return super.toString();
-    }     
+    }   
+  @Override
+     public void peell(){
+         super.peell();
+    }
     
 }

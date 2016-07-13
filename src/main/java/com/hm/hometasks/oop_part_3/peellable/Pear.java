@@ -7,7 +7,7 @@ package com.hm.hometasks.oop_part_3.peellable;
  *
  * @author Osin Vladimir
  */
-public class Pear extends Fruit implements Peellable{
+public class Pear extends Fruit {
       
     private final static String name = "Груша";
 
@@ -18,6 +18,9 @@ public class Pear extends Fruit implements Peellable{
     public String toString() {
         return super.toString();
     }
-     
+    @Override
+     public void peell(){
+         super.peell();
+    } 
     
 }

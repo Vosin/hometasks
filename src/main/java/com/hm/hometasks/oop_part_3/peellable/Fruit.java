@@ -1,6 +1,9 @@
 /*
  * Класс Фрукт
 */
+
+
+
 package com.hm.hometasks.oop_part_3.peellable;
 
 /**
@@ -53,7 +56,7 @@ public class Fruit extends Plant implements Peellable{
                 + "Цвет " + " " + getColor() + " " + "Зрелость=" + " " + getMaturity() + " "
                 + "Состояние " + " " + getCondition();
     } 
-  
+   @Override
     public void peell(){
         setWeight(getWeight()-((getWeight()*2)/100));
         setCleaning(true);
