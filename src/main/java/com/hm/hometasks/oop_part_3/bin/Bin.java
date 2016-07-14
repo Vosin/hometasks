@@ -52,7 +52,7 @@ public class Bin extends ArrayList<Object> {
         }
         return bin1;
     }
-
+//получение элемента корзины по индексу
     public int extractPlant(int ind) {
         int index = indexOf(ind);
         remove(index);
@@ -62,25 +62,36 @@ public class Bin extends ArrayList<Object> {
     //извлечение содержимого и очистка корзины 
     public Bin extractAll() {
         for (int i = 0; i < size(); i++) {
-            System.out.println("Элемент корзины =" + get(i));
+            System.out.println("Элемент корзины удален =" + get(i));
         }
         clear();
         System.out.println("Корзина очищена" + size());
         return this;
-    }     //извлечение всех фруктов
+    }     
+  //извлечение всех фруктов
 
     public void extractAllFruts() {
-
         for (int i = 0; i < size(); i++) {
-            System.out.println("Элемент корзины =" + get(i));
+            Object obj = get(i);
+            if (obj instanceof Fruit) {
+            Fruit fruit = (Fruit) obj;
+            System.out.println("Элемент корзины извлечен =" + get(i));
+            int index = indexOf(i);
+            remove(index);
         }
 
     }
-
+    }
+    //удаление всех овощей
     public void extractAllVegetables() {
         for (int i = 0; i < size(); i++) {
-            System.out.println("Элемент корзины =" + get(i));
+            Object obj = get(i);
+            if (obj instanceof Vegetable) {
+            Vegetable vegetable = (Vegetable) obj;
+            System.out.println("Элемент корзины извлечен =" + get(i));
+            int index = indexOf(i);
+            remove(index);
         }
-
-    }
 }
+}
+}    

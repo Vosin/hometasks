@@ -12,25 +12,25 @@ public class Coffee {
     private String name;//название
     private String sort;//сорт
     private String condition;//состояние
-    private int weight;//вес в граммах
+    private int weight;//вес кофе в граммах
     private double price;//цена за упаковку
     private String quality;//качество
-    private int weightUp;//вес упаковки
+    private double packading;//вес упаковки
     private double ratio;//соотношение цены к весу;
     
     //конструкторы
     public Coffee() {
     }
 
-    public Coffee(String name, String sort, String condition, int weight, double price, String quality,int weightUp){
+    public Coffee(String name, String sort, String condition, int weight, double price, String quality,double packading){
         this.name = name;
         this.sort = sort;
         this.condition = condition;
         this.weight = weight;
         this.price = price;
         this.quality = quality;
-        this.weightUp = weightUp;
-      }
+        this.packading = packading;
+        }
     public Coffee(String name, String sort, String condition) {
         this.name = name;
         this.sort = sort;
@@ -74,23 +74,23 @@ public class Coffee {
     public String getQuality() {
         return quality;
     }
-     public void setWeightUp(int weightUp) {
-        this.weightUp = weightUp;
-    }
-    public int getWeightUp() {
-        return weightUp;
-    }
-    public void setRatio(double price,int weight) {
+      public void setRatio(double price,int weight) {
         this.ratio = price/weight;
     }
     public double getRatio() {
         return ratio;
     }
+    public void setPackading(double packading) {
+        this.packading = packading;
+    }
+    public double getPackading() {
+        return packading;
+    }
     @Override
     public String toString() {
         return "Кофе" + " " + name + "  "+"Сорт =" +" "+ sort + " "
                 + "Состояние=" + " " + condition +" " + "Вес в граммах c упаковкой:" + " "
-                + weight+weightUp+" "+"Цена за упаковку= "+" "+price+" "+"Качество сорта= "+" "+quality;
+                + weight+packading+" "+"Цена за упаковку= "+" "+price+" "+"Качество сорта= "+" "+quality;
     }
 }
 

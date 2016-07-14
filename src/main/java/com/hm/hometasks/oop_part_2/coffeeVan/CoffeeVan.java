@@ -26,7 +26,7 @@ public class CoffeeVan{
     private ArrayList<Coffee> coffees = new ArrayList<Coffee>();
    //заполняем фургон кофе
     public CoffeeVan addCoffee(Coffee coffee) {
-        weight +=coffee.getWeight()+coffee.getWeightUp();
+        weight +=coffee.getWeight()+coffee.getPackading();
         if(weight< WEIGHT_FULL){
         coffees.add(coffee);
         price += coffee.getPrice();
