@@ -3,6 +3,7 @@
  */
 package com.hm.hometasks.oop_part_3.applicationDemo;
 
+import com.hm.hometasks.oop_part_3.bin.Bin;
 import com.hm.hometasks.oop_part_3.peellable.Apple;
 import com.hm.hometasks.oop_part_3.peellable.Banana;
 import com.hm.hometasks.oop_part_3.peellable.Bow;
@@ -14,18 +15,18 @@ import com.hm.hometasks.oop_part_3.peellable.Orange;
 import com.hm.hometasks.oop_part_3.peellable.Pear;
 import com.hm.hometasks.oop_part_3.peellable.Plant;
 import com.hm.hometasks.oop_part_3.peellable.Potatoes;
+import com.hm.hometasks.oop_part_3.peellable.Vegetable;
 
 /**
  *
  * @author Osin Vladimir
  */
 public class ConsolMenu {
-
     public void Initialisation() {
+        Bin bin = new Bin();
         Scanner sc = new Scanner(System.in);
         boolean end = false;
         while (!end) {
-            System.out.println("WELCOME TO APPLICATION!! ");
             System.out.println("Создание овощей и фруктов:");
             System.out.println("Введите характеристики для Яблоко - 1");
             System.out.println("Введите характеристики для Груша - 2 ");
@@ -37,49 +38,113 @@ public class ConsolMenu {
             System.out.println("Введите характеристики для Лук - 8 ");
             try {
                 int result = Integer.parseInt(sc.next());
-                createFruitVegetables(result, sc);
+                createFruitVegetables(result, sc,bin);
             } catch (Exception e) {
                 end = true;
-            }System.out.println("Желаете продолжить: 1 -Да,0-Нет,2-Заполнить Корзину ");
+            }System.out.println("Желаете продолжить создавать объекты?: 1 -Да,0-Нет ");
             int contunue = Integer.parseInt(sc.next());
             if (contunue == 1) {
                 end = false;
             } else {
-                end = true;
-            }
+                System.out.println("Общее количество фруктов и овощей положенных в корзину составляет "+bin.size()+" штук");  
+                System.out.println("Желаете извлечь овощи или фрукты для очистки из корзины?: 1 -Да,0-Нет ");  
+                int contunue1 = Integer.parseInt(sc.next());
+                if (contunue1 == 1) {
+                 int count = bin.size()-1;  
+                 System.out.println("Введите число от 0 до "+count); 
+                 int contunue2 = Integer.parseInt(sc.next());
+                 Object obj = bin.extractFruitVegetables(contunue2);
+                    if (obj instanceof Fruit) {
+                        Fruit fruit = (Fruit) obj;
+                        System.out.println("Извлечен" + " " + fruit.toString());
+                    } else if (obj instanceof Vegetable) {
+                        Vegetable vegetable = (Vegetable) obj;
+                        System.out.println("Извлечен" + " " + vegetable.toString());
+                    }
+                   System.out.println("Общий Вес корзины до чистки = "+bin.getWeightBin());
+                 
+                 
+                }
         }
        }
-
-    public static void createFruitVegetables(int result, Scanner sc) {
-        switch (result) {
+    }
+    public static void createFruitVegetables(int result, Scanner sc,Bin bin) {
+       switch (result) {
             case 1: {
-                 createApple(result, sc);
-                }break;
+                 Plant apple = createApple(result, sc);
+                 System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(apple,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
+            }break;
             case 2: {   
-                createPear(result, sc);
+              Plant pear = createPear(result, sc);
+              System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(pear,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
                 }break;
             case 3: {   
-                createBanana(result, sc);
+              Plant banana = createBanana(result, sc);
+               System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(banana,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
                 }break; 
             case 4: {   
-                createOrange(result, sc);
+                 Plant orange = createOrange(result, sc);
+                 System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(orange,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
                 }break;   
              case 5: {
-                 createPotatoes(result, sc);
+              Plant potatoes = createPotatoes(result, sc);
+                 System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(potatoes,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
                 }break;
             case 6: {   
-                createCarrot(result, sc);
+                Plant carrot = createCarrot(result, sc);
+                 System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(carrot,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                 }
                 }break;
             case 7: {   
-                createCelery(result, sc);
-                }break; 
+               Plant celery = createCelery(result, sc);
+                System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(celery,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                }
+               }break; 
             case 8: {   
-                createBow(result, sc);
+            Plant bow = createBow(result, sc);
+            System.out.println("Добавить в корзину? 1 -Да,0-Нет"); 
+                 int r1 = Integer.parseInt(sc.next());
+                 if (r1 == 1) {
+                     addBin(bow,bin);
+                     System.out.println("Общий Вес корзины = "+bin.getWeightBin());
+                }
                 }break;        
                 
         }
     }
-
     public static String findColor(int color) {
         String result;
         switch (color) {
@@ -134,7 +199,7 @@ public class ConsolMenu {
         return result;
     }
     public static Plant createApple(int io,Scanner sc) {
-               System.out.println("Введите вес ");
+                System.out.println("Введите вес ");
                 double weight = Double.parseDouble(sc.next());
                 System.out.println("Введите цвет:1-Желтый,2-Зеленый,Красный ");
                 int color1 = Integer.parseInt(sc.next());
@@ -163,6 +228,7 @@ public class ConsolMenu {
                 String condition = findCondition(condition1);
                 Plant pear= new Pear(weight, color, maturity, condition, false);
                 System.out.println(pear.toString());
+                              
                 return pear;
 }
     public static Plant createBanana(int io,Scanner sc) {
@@ -213,7 +279,7 @@ public class ConsolMenu {
                 System.out.println(potatoes.toString());
                 return potatoes;
 }
-   public static Plant createCarrot(int io,Scanner sc) {
+    public static Plant createCarrot(int io,Scanner sc) {
                 System.out.println("Введите вес ");
                 double weight = Double.parseDouble(sc.next());
                 System.out.println("Введите цвет:1-Желтый,2-Зеленый,Красный ");
@@ -229,7 +295,7 @@ public class ConsolMenu {
                 System.out.println(carrot.toString());
                 return carrot;
 } 
-   public static Plant createCelery(int io,Scanner sc) {
+    public static Plant createCelery(int io,Scanner sc) {
                 System.out.println("Введите вес ");
                 double weight = Double.parseDouble(sc.next());
                 System.out.println("Введите цвет:1-Желтый,2-Зеленый,Красный ");
@@ -245,7 +311,7 @@ public class ConsolMenu {
                 System.out.println(celery.toString());
                 return celery;
 } 
-   public static Plant createBow(int io,Scanner sc) {
+    public static Plant createBow(int io,Scanner sc) {
                 System.out.println("Введите вес ");
                 double weight = Double.parseDouble(sc.next());
                 System.out.println("Введите цвет:1-Желтый,2-Зеленый,Красный ");
@@ -262,4 +328,10 @@ public class ConsolMenu {
                 return bow;
    
 }
+    
+    public static void addBin(Plant plant,Bin bin){
+        bin.addfruitVegetables(plant);
+    }
+    
+    
 }

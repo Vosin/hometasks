@@ -24,9 +24,7 @@ public class UnevenArray {
         mirrorHorizontally(array);
         System.out.println("Отражение по вертикали:" + " ");
         mirrorVertically(array);
-        System.out.println("Отражение одновременно по горизонтали и по  вертикали:" + " ");
-        mirrorHorizontallyVertically(array);
-    }
+       }
 
     public static int[][] createDim() {
         int[][] array = new int[5][];
@@ -91,25 +89,7 @@ public class UnevenArray {
             System.out.println();
         }
     }
-    public static void mirrorHorizontallyVertically(int[][] arr) {
-       String space8 = " " + " " + " " + " " + " " + " " + " " + " "; 
-       String space6 = " " + " " + " " + " " + " " + " ";
-       String space4 = " " + " " + " " + " ";
-       String space2 = " " + " ";
-       String space1 = " ";
-       
-         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if ((i == 0) & (j == 0)) {
-                    System.out.print(space8 + arr[i][j]);
-                    System.out.println(" ");
-                    System.out.print(arr[i][j]);
-                    System.out.println("\r");
-                     } else if ((i == 1) & (j == 0)) {
-                    System.out.print(space6 + arr[i][j]);
-    }
+ 
 
-    }   
 }
-}
-}
+

@@ -13,50 +13,52 @@ import com.hm.hometasks.oop_part_3.peellable.Vegetable;
  */
 public class Bin extends ArrayList<Object> {
 
-    private double weightBin;
+    private double weightBin = 0;
 
     public double getWeightBin() {
         return weightBin;
     }
 
     //заполняем корзину овощами и фруктами
-    public Bin addfruitVegetables(Object obj) {
-        double weightFruit = 0;
-        double weightVegetables = 0;
+    public void addfruitVegetables(Object obj) {
         if (obj instanceof Fruit) {
             Fruit fruit = (Fruit) obj;
             add(fruit);
-            weightFruit += fruit.getWeight();
+            weightBin += fruit.getWeight();
         } else if (obj instanceof Vegetable) {
             Vegetable vegetable = (Vegetable) obj;
             add(vegetable);
-            weightVegetables += vegetable.getWeight();
+            weightBin += vegetable.getWeight();
         }
-        weightBin = weightFruit + weightVegetables;
-        return this;
+      
     }
 
     //перегружаем добавляем на входе массив из фруктов
-    public Bin addfruitVegetables(ArrayList fruitVegetables) {
+    public void addfruitVegetables(ArrayList fruitVegetables) {
         for (int i = 0; i < fruitVegetables.size(); i++) {
             add(fruitVegetables.get(i));
         }
-        return this;
     }
     //перегружаем добавляем на входе корзину из фруктов
 
-    public Bin addBin(Bin bin) {
+    public void addfruitVegetables(Bin bin) {
         Bin bin1 = new Bin();
         for (int i = 0; i < bin.size(); i++) {
            bin1.add(bin.get(i));
         }
-        return bin1;
     }
-//получение элемента корзины по индексу
-    public int extractPlant(int ind) {
-        int index = indexOf(ind);
-        remove(index);
-        return index;
+//извлечение элемента корзины по индексу
+    public Object extractFruitVegetables(int ind) {
+      Object obj = get(ind);
+      if (obj instanceof Fruit) {
+            Fruit fruit = (Fruit) obj;
+            weightBin -= fruit.getWeight();
+        } else if (obj instanceof Vegetable) {
+            Vegetable vegetable = (Vegetable) obj;
+            weightBin -= vegetable.getWeight();
+        }
+      return remove(ind);
+      
     }
 
     //извлечение содержимого и очистка корзины 
@@ -75,7 +77,7 @@ public class Bin extends ArrayList<Object> {
             Object obj = get(i);
             if (obj instanceof Fruit) {
             Fruit fruit = (Fruit) obj;
-            System.out.println("Элемент корзины извлечен =" + get(i));
+            System.out.println("Элемент корзины извлечен =" + fruit.getName());
             int index = indexOf(i);
             remove(index);
         }
@@ -88,7 +90,7 @@ public class Bin extends ArrayList<Object> {
             Object obj = get(i);
             if (obj instanceof Vegetable) {
             Vegetable vegetable = (Vegetable) obj;
-            System.out.println("Элемент корзины извлечен =" + get(i));
+            System.out.println("Элемент корзины извлечен =" + vegetable.getName());
             int index = indexOf(i);
             remove(index);
         }
