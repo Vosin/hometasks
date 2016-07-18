@@ -10,6 +10,6 @@ import java.util.ArrayList;
  * @author Osin Vladimir
  */
 public interface Slicer {
-    double slicerItem(Object obj);
-    double slicerItems(ArrayList arrayList);
+    void slicerItem(Object obj);
+    void slicerItems(ArrayList arrayList);
 }

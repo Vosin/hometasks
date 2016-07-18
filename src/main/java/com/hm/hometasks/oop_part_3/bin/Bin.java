@@ -30,7 +30,7 @@ public class Bin extends ArrayList<Object> {
             add(vegetable);
             weightBin += vegetable.getWeight();
         }
-      
+
     }
 
     //перегружаем добавляем на входе массив из фруктов
@@ -44,21 +44,22 @@ public class Bin extends ArrayList<Object> {
     public void addfruitVegetables(Bin bin) {
         Bin bin1 = new Bin();
         for (int i = 0; i < bin.size(); i++) {
-           bin1.add(bin.get(i));
+            bin1.add(bin.get(i));
         }
     }
 //извлечение элемента корзины по индексу
+
     public Object extractFruitVegetables(int ind) {
-      Object obj = get(ind);
-      if (obj instanceof Fruit) {
+        Object obj = get(ind);
+        if (obj instanceof Fruit) {
             Fruit fruit = (Fruit) obj;
             weightBin -= fruit.getWeight();
         } else if (obj instanceof Vegetable) {
             Vegetable vegetable = (Vegetable) obj;
             weightBin -= vegetable.getWeight();
         }
-      return remove(ind);
-      
+        return remove(ind);
+
     }
 
     //извлечение содержимого и очистка корзины 
@@ -69,31 +70,32 @@ public class Bin extends ArrayList<Object> {
         clear();
         System.out.println("Корзина очищена" + size());
         return this;
-    }     
-  //извлечение всех фруктов
+    }
+    //извлечение всех фруктов
 
     public void extractAllFruts() {
         for (int i = 0; i < size(); i++) {
             Object obj = get(i);
             if (obj instanceof Fruit) {
-            Fruit fruit = (Fruit) obj;
-            System.out.println("Элемент корзины извлечен =" + fruit.getName());
-            int index = indexOf(i);
-            remove(index);
-        }
+                Fruit fruit = (Fruit) obj;
+                System.out.println("Элемент корзины извлечен =" + fruit.getName());
+                int index = indexOf(i);
+                remove(index);
+            }
 
+        }
     }
-    }
+
     //удаление всех овощей
     public void extractAllVegetables() {
         for (int i = 0; i < size(); i++) {
             Object obj = get(i);
             if (obj instanceof Vegetable) {
-            Vegetable vegetable = (Vegetable) obj;
-            System.out.println("Элемент корзины извлечен =" + vegetable.getName());
-            int index = indexOf(i);
-            remove(index);
+                Vegetable vegetable = (Vegetable) obj;
+                System.out.println("Элемент корзины извлечен =" + vegetable.getName());
+                int index = indexOf(i);
+                remove(index);
+            }
         }
+    }
 }
-}
-}    

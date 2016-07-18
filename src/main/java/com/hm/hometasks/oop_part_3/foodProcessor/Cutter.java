@@ -8,6 +8,6 @@ import java.util.ArrayList;
  * @author Osin Vladimir
  */
 public interface Cutter {
-    double cut(Object obj);
-    double cutAll(ArrayList arrayList);
+    void cut(Object obj);
+    void cutAll(ArrayList arrayList);
 }

@@ -23,7 +23,7 @@ public abstract class Plant {
     public Plant() {
     }
 
-    public Plant(String name, String type, double weight, String color, String maturity, String condition,boolean cleaning) {
+    public Plant(String name, String type, double weight, String color, String maturity, String condition, boolean cleaning) {
         this.name = name;
         this.type = type;
         this.weight = weight;
@@ -62,15 +62,18 @@ public abstract class Plant {
     public boolean getCleaning() {
         return cleaning;
     }
+
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
     public void setCleaning(boolean cleaning) {
-       this.cleaning = cleaning;
+        this.cleaning = cleaning;
     }
+
     @Override
     public String toString() {
-        return getName()+" "+getType()+" "+ "Весом =" + getWeight() + " "
+        return getName() + " " + getType() + " " + "Весом =" + getWeight() + " "
                 + "Цвет " + " " + getColor() + " " + "Зрелость=" + " " + getMaturity() + " "
                 + "Состояние " + " " + getCondition();
     }
