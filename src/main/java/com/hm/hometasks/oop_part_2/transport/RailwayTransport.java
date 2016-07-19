@@ -59,7 +59,7 @@ public RailwayTransport(String name) {
     }
     @Override
     public String toString() {
-        return "Вагон" + " " + name + "  "+"Количество  мест пассажиров =" +" "+ numberSeats + " "
+        return  getName() + "  "+"Количество  мест пассажиров =" +" "+ numberSeats + " "
                 + "Количество мест багажа=" + " " + numberBagage + " " + "Уровень комфортности:" + " "
                 + levelComfort ;
     }

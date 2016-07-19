@@ -14,29 +14,11 @@ import java.util.Comparator;
 public class Bouquet {
 
     private double price;//цена букета
-    private String accessories;//акссесуары букета
-    private double priceAccessories;//цена акссесуара
+
 
     public double getPrice() {
         return price;
     }
-
-    public void setAccessories(String accessories) {
-        this.accessories = accessories;
-    }
-
-    public String getAccessories() {
-        return accessories;
-    }
-
-    public void setPriceAccessories(double priceAccessories) {
-        this.priceAccessories = priceAccessories;
-    }
-
-    public double getPriceAccessories() {
-        return priceAccessories;
-    }
-
     private ArrayList<Flower> flowers = new ArrayList<Flower>();
 
     public Bouquet addFlower(Flower flower) {
@@ -67,6 +49,12 @@ public class Bouquet {
             System.out.println("Нет такого  цветка");
         }
     }
+    public void printFlowers(){
+        for(int i=0;i<flowers.size(); i++ ){
+            System.out.println(flowers.get(i).toString());
+        }
+    }
+  
 
 }
 

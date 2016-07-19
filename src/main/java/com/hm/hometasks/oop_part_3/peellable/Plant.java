@@ -74,8 +74,8 @@ public abstract class Plant {
     @Override
     public String toString() {
         return getName() + " " + getType() + " " + "Весом =" + getWeight() + " "
-                + "Цвет " + " " + getColor() + " " + "Зрелость=" + " " + getMaturity() + " "
-                + "Состояние " + " " + getCondition();
+                + "Цвет= " + " " + getColor() + " " + "Зрелость=" + " " + getMaturity() + " "
+                + "Состояние= " + " " + getCondition();
     }
 
 }

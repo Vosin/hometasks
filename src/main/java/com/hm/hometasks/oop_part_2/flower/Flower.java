@@ -67,7 +67,7 @@ public Flower(String name, double price) {
 
     @Override
     public String toString() {
-        return "Цветок:" + " " + name + " " + "Цена =" + price + " " + "Уровень свежести=" + " "
+        return getName() + " " + "Цена =" + price + " " + "Уровень свежести=" + " "
                 + levelFresh + " " + "Длина стебля =" + stemLength;
     }
 

@@ -19,7 +19,14 @@ public class FlowerShop {
 
     public void FlowerShopInit() {
         Bouquet bouquet = createBuquet();
-        consolIO(bouquet);
+        System.out.println("Создан букет");
+        bouquet.printFlowers();
+        //добавляем аксесуары
+        Aksessuar envelope = new Envelope(12.50,"прозрачная");
+        Aksessuar tape = new Tape(8.50,"розовый");
+        System.out.println("Добавлен аксессуар =" + " " + envelope.getName()+" "+"с ценой ="+" "+envelope.getPrice());
+        System.out.println("Добавлен аксессуар = " + " " + tape.getName()+" "+"с ценой ="+" "+tape.getPrice());
+        consolIO(bouquet,envelope,tape);
     }
 
     public static Bouquet createBuquet() {
@@ -37,20 +44,17 @@ public class FlowerShop {
         bouquet.addFlower(carn);
         bouquet.addFlower(ros1);
         bouquet.addFlower(tup2);
-
-        //добавляем аксесуары
-        bouquet.setAccessories("Пленка прозрачная");
-        bouquet.setPriceAccessories(10.5);
+        
         return bouquet;
     }
 
-    public static void consolIO(Bouquet bouquet) {
+    public static void consolIO(Bouquet bouquet,Aksessuar envilope,Aksessuar tape) {
         double totalPrice;
-        totalPrice = bouquet.getPrice() + bouquet.getPriceAccessories();
+        totalPrice = bouquet.getPrice() + envilope.getPrice()+tape.getPrice();
 
         System.out.println("Стоимость букета с учетом акссесуаров" + " " + totalPrice);
         System.out.println("Стоимость букета без акссесуаров" + " " + bouquet.getPrice());
-        System.out.println("Стоимость акссесуара" + " " + bouquet.getAccessories() + " " + "=" + bouquet.getPriceAccessories());
+  
 
         Scanner sc = new Scanner(System.in);
         boolean end = false;

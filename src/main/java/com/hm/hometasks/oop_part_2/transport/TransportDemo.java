@@ -1,5 +1,5 @@
 /*
- * 8.  Транспорт .  Определить   иерархию   подвижного  
+ * 8.Транспорт .  Определить   иерархию   подвижного  
  *  состава   железнодорожного  
  * транспорта .  Создать   пассажирский   поезд . 
  * Подсчитать   общую   численность   пассажиров   и  
@@ -26,7 +26,8 @@ public class TransportDemo {
     }
 
     public static PassengerTrain createPassengerTrain() {
-
+        
+        RailwayTransport lokomotiv = new Lokomotive(0, 0, 0);
         RailwayTransport kupe = new KupeRailwayTransport(40, 20, 2);
         RailwayTransport platskart = new PlatskartRailwayTransport(60, 45, 3);
         RailwayTransport luks = new LuksRailwayTransport(25, 15, 1);
@@ -35,7 +36,8 @@ public class TransportDemo {
         RailwayTransport luks1 = new LuksRailwayTransport(25, 15, 1);
 
         PassengerTrain pt = new PassengerTrain();
-
+      
+        pt.addCarriage(lokomotiv);
         pt.addCarriage(kupe);
         pt.addCarriage(platskart);
         pt.addCarriage(luks);

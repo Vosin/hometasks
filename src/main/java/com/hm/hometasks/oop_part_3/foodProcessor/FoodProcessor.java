@@ -62,10 +62,10 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
             Fruit fruit = (Fruit) obj;
             if (fruit.getCleaning() == true) {
                 fruit.setWeight(fruit.getWeight() - ((fruit.getWeight() * 2) / 100));
-                System.out.println("Вес после шинковки" + fruit.getWeight());
-                System.out.println("Вес потерь после  шинковки" + (fruit.getWeight() * 2) / 100);
+                System.out.println("Вес после шинковки" + " " + fruit.getWeight());
+                System.out.println("Вес потерь после  шинковки" + " " + (fruit.getWeight() * 2) / 100);
             } else {
-                throw new IllegalArgumentException(fruit.toString() + "не очищен");
+                throw new IllegalArgumentException(fruit.toString() + " " + "не очищен!!!");
             }
         } else if (obj instanceof Vegetable) {
             Vegetable vegetable = (Vegetable) obj;
@@ -74,7 +74,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                 System.out.println("Вес после шинковки" + " " + vegetable.getWeight());
                 System.out.println("Вес потерь после  шинковки" + " " + (vegetable.getWeight() * 2) / 100);
             } else {
-                throw new IllegalArgumentException(vegetable.toString() + "не очищен");
+                throw new IllegalArgumentException(vegetable.toString() + " " + "не очищен!!!");
             }
 
         }
@@ -92,7 +92,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                     System.out.println("Вес после шинковки" + " " + fruit.getWeight());
                     System.out.println("Вес потерь после  шинковки" + " " + (fruit.getWeight() * 2) / 100);
                 } else {
-                    throw new IllegalArgumentException(fruit.toString() + "не очищен");
+                    throw new IllegalArgumentException(fruit.toString() + " " + "не очищен!!!");
                 }
             } else if (obj instanceof Vegetable) {
                 Vegetable vegetable = (Vegetable) obj;
@@ -101,7 +101,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                     System.out.println("Вес после шинковки" + " " + vegetable.getWeight());
                     System.out.println("Вес потерь после  шинковки" + " " + (vegetable.getWeight() * 2) / 100);
                 } else {
-                    throw new IllegalArgumentException(vegetable.toString() + "не очищен");
+                    throw new IllegalArgumentException(vegetable.toString() + " " + "не очищен!!!");
                 }
 
             }
@@ -119,7 +119,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                 System.out.println("Вес после нарезки" + " " + fruit.getWeight());
                 System.out.println("Вес потерь после  нарезки" + " " + (fruit.getWeight() * 2) / 100);
             } else {
-                throw new IllegalArgumentException(fruit.toString() + "не очищен");
+                throw new IllegalArgumentException(fruit.toString() + " " + "не очищен!!!");
             }
         } else if (obj instanceof Vegetable) {
             Vegetable vegetable = (Vegetable) obj;
@@ -128,7 +128,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                 System.out.println("Вес после нарезки" + " " + vegetable.getWeight());
                 System.out.println("Вес потерь после нарезки" + " " + (vegetable.getWeight() * 2) / 100);
             } else {
-                throw new IllegalArgumentException(vegetable.toString() + "не очищен");
+                throw new IllegalArgumentException(vegetable.toString() + " " + "не очищен!!!");
             }
 
         }
@@ -147,7 +147,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                     System.out.println("Вес после нарезки" + " " + fruit.getWeight());
                     System.out.println("Вес потерь после  нарезки" + " " + (fruit.getWeight() * 2) / 100);
                 } else {
-                    throw new IllegalArgumentException(fruit.toString() + "не очищен");
+                    throw new IllegalArgumentException(fruit.toString() + " " + "не очищен!!!");
                 }
             } else if (obj instanceof Vegetable) {
                 Vegetable vegetable = (Vegetable) obj;
@@ -156,7 +156,7 @@ public class FoodProcessor implements Peeller, Cutter, Slicer {
                     System.out.println("Вес после нарезки" + " " + vegetable.getWeight());
                     System.out.println("Вес потерь после  нарезки" + " " + (vegetable.getWeight() * 2) / 100);
                 } else {
-                    throw new IllegalArgumentException(vegetable.toString() + "не очищен");
+                    throw new IllegalArgumentException(vegetable.toString() + " " + "не очищен!!!");
                 }
 
             }
